@@ -17,16 +17,26 @@ export const Container = styled.div`
     padding: 40px 20px 20px;
 
     @media (min-width: ${themeStyles.breakpoints.tablet}) {
-        padding: 60px 80px;
+        padding: 40px 80px;
     }
 `
 
 export const Title = styled(H1)`
+    font-size: 1.5rem;
     margin: 0 0 .25rem 0;
     color: ${themeStyles.colors.white};
+
+    @media (min-width: ${themeStyles.breakpoints.tablet}) {
+        font-size: 2rem;
+    }
 `
 
 export const Subtitle = styled(H4)`
+    font-size: 0.75rem;
     margin: 0 0 0 0;
-    color: ${themeStyles.colors.secondary} ;
+    color: ${themeStyles.colors.secondary};
+
+    @media (min-width: ${themeStyles.breakpoints.tablet}) {
+        font-size: 1rem;
+    }
 `
