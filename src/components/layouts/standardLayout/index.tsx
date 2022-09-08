@@ -1,4 +1,4 @@
-import React, { FC, useRef, useState } from 'react'
+import React, { FC, useEffect, useRef, useState } from 'react'
 
 import Header from 'components/molecules/Header'
 import Navigation from 'components/molecules/Navigation'
@@ -11,16 +11,23 @@ interface standardLayoutProps {
 
 const StandardLayout: FC<standardLayoutProps> = ({ children }) => {
   const headerRef = useRef<HTMLElement>(null)
+  const [headerHeightState, setHeaderHeightState] = useState(200)
 
-  let headerHeightheaderRef = headerRef.current?.clientHeight
-  let containerOffset = headerHeightheaderRef ? headerHeightheaderRef : 200
+  useEffect(() => {
+    let headerHeightheaderRef = headerRef.current?.clientHeight
+    let headerHeight = headerHeightheaderRef ? headerHeightheaderRef : 200
+    setHeaderHeightState(headerHeight)
 
-  const [containerOffsetState, setContainerOffsetState] = useState(containerOffset)
+    const onResizeHandler = () => {
+      headerHeightheaderRef = headerRef.current?.clientHeight
+      headerHeight = headerHeightheaderRef ? headerHeightheaderRef : 200
+      setHeaderHeightState(headerHeight)
+    }
 
-  const onResizeHandler = () => {
-    setContainerOffsetState(containerOffset)
-  }
-  window.addEventListener('resize', onResizeHandler)
+    window.addEventListener("resize", onResizeHandler)
+
+    return () => window.addEventListener("resize", onResizeHandler)
+  }, [])
 
   return (
     <>
@@ -29,8 +36,8 @@ const StandardLayout: FC<standardLayoutProps> = ({ children }) => {
         subtitle="Aspiring Front-end developer / Product Manager"
         forwardRef={headerRef}
       />
-      <Container offsetTop={containerOffset}>
-        <Navigation />
+      <Container headerHeight={headerHeightState}>
+        <Navigation offSetTop={headerHeightState}/>
         <Main>{children}</Main>
       </Container>
     </>

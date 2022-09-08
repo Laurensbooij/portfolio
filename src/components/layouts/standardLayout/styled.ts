@@ -3,25 +3,25 @@ import styled from "styled-components"
 import themeStyles from "utilities/themeStyles"
 
 interface containerProps {
-  offsetTop: number,
+  headerHeight: number,
 }
 
 export const Container = styled.div<containerProps>`
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
   width: 100vw;
   height: 100%;
-  margin-top: ${props => props.offsetTop}px;
+  margin-top: ${props => props.headerHeight}px;
   padding: 40px 12px;
 
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
-    grid-template-columns: 2fr 6fr;
-    grid-gap: 0 60px;
+    width: auto;
+    margin-left: 360px;
     padding: 80px;
   }
 `
 
 export const Main = styled.main`
+  width: 100%;
 
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
     height: 100%;
