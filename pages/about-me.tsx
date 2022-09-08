@@ -1,10 +1,12 @@
 import type { NextPageWithLayout } from './_app'
 import type { ReactElement } from 'react'
 
+import Head from 'next/head'
+
 import Layout from 'components/layouts/standardLayout'
 
-import Head from 'next/head'
-import Header from 'components/molecules/Header'
+import AboutMeSection from 'components/organisms/AboutMeSection'
+
 
 const AboutMe: NextPageWithLayout = () => (
   <>
@@ -13,6 +15,7 @@ const AboutMe: NextPageWithLayout = () => (
       <meta name="description" content="About me page about Laurens Booij" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
+    <AboutMeSection />
   </>
 )
 
