@@ -1,10 +1,11 @@
 import React, { FC } from 'react'
 
-import AboutMeContentCard from './AboutMeContentCard'
+import SectionTitle from 'components/atoms/SectionTitle'
 import PersonalIntroductionCard from './PersonalIntroductionCard'
+import AboutMeContentCard from './AboutMeContentCard'
 import GridContainer from 'components/atoms/GridContainer'
 
-import { Container, StyledH2 } from './styled'
+import { Container } from './styled'
 
 import compassIcon from "media/icons/icon-compass.png"
 
@@ -16,7 +17,7 @@ const AboutMeSection: FC<aboutMeSectionProps> = (  ) => {
 
   return (
     <Container>
-      <StyledH2>About me</StyledH2>
+      <SectionTitle>About me</SectionTitle>
       <GridContainer>
         <PersonalIntroductionCard />
         <AboutMeContentCard

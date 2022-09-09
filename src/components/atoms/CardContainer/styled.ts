@@ -7,6 +7,9 @@ interface containerProps {
 }
 
 export const Container = styled.div<containerProps>`
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
   grid-column: span 4;
   background: ${themeStyles.colors.white};
   border: 2px solid ${themeStyles.colors.grey3};

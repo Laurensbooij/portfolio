@@ -2,18 +2,11 @@ import styled from "styled-components"
 
 import themeStyles from "utilities/themeStyles"
 
-import CardContainer from 'components/atoms/CardContainer'
 import { H3, BodyText } from "components/atoms/TextElements"
 
 interface iconProps {
   iconUrl: string,
 }
-
-export const StyledCardContainer = styled(CardContainer)`
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-`
 
 export const TitleContainer = styled.div`
   display: flex;

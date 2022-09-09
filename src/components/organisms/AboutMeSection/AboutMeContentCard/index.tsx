@@ -1,6 +1,8 @@
 import React, { FC } from 'react'
 
-import { StyledCardContainer, TitleContainer, IconContainer, Icon, Title, Text } from './styled'
+import CardContainer from 'components/atoms/CardContainer'
+
+import { TitleContainer, IconContainer, Icon, Title, Text } from './styled'
 
 interface aboutMeContentProps {
   iconUrl: any,
@@ -9,7 +11,7 @@ interface aboutMeContentProps {
 }
 
 const AboutMeContent: FC<aboutMeContentProps> = ({ iconUrl, title, text }) => (
-  <StyledCardContainer>
+  <CardContainer>
     <TitleContainer>
       <IconContainer>
         <Icon iconUrl={iconUrl} />
@@ -17,7 +19,7 @@ const AboutMeContent: FC<aboutMeContentProps> = ({ iconUrl, title, text }) => (
       <Title>{title}</Title>
     </TitleContainer>
     <Text>{text}</Text>
-  </StyledCardContainer>
+  </CardContainer>
 )
 
 export default AboutMeContent
