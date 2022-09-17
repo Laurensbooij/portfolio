@@ -4,6 +4,7 @@ import themeStyles from 'utilities/themeStyles'
 
 export const Anchor = styled.a`
   display: inline-block;
+  width: fit-content;
   font-family: 'Montserrat', Roboto, Helvetica Neue, sans-serif;
   font-weight: 600;
   font-size: 0.875rem;
