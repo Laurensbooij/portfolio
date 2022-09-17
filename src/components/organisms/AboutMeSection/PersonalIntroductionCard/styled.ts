@@ -14,15 +14,16 @@ export const StyledCardContainer = styled(CardContainer)`
 `
 
 export const Image = styled.img`
-  width: 40%;
+  width: 200px;
+  height: 200px;
   aspect-ratio: 1 / 1;
-  min-width: 160px;
-  max-width: 320px;
   object-fit: cover;
   border-radius: 50%;
 
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
     order: 2;
+    width: 280px;
+    height: 280px;
   }
 `
 

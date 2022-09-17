@@ -1,16 +1,21 @@
-import React from 'react'
+import React, { FC } from 'react'
 
 import { StyledCardContainer, Image, TextContainer, Title, Subtitle, Text } from './styled'
 
-const imgSrc = "https://trinamiek.nl/wp-content/uploads/2018/07/placeholder-red.png"
+interface personalIntroductionProps {
+  title: string,
+  subtitle: string,
+  text: string,
+  imageSrc: string,
+}
 
-const PersonalIntroduction = (  ) => (
+const PersonalIntroduction: FC<personalIntroductionProps> = ({ title, subtitle, text, imageSrc }) => (
   <StyledCardContainer fullWidth>
-    <Image alt="Profile picture" src={imgSrc} />
+    <Image alt="Profile picture" src={imageSrc} />
     <TextContainer>
-      <Title>Laurens Booij</Title>
-      <Subtitle>Front-end developer / Aspiring Product Manager</Subtitle>
-      <Text>Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</Text>
+      <Title>{title}</Title>
+      <Subtitle>{subtitle}</Subtitle>
+      <Text>{text}</Text>
     </TextContainer>
   </StyledCardContainer>
 )
