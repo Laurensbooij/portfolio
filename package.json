@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "contentful": "^9.1.34",
+    "contentful-ts-type-generator": "github:arimkevi/contentful-ts-type-generator",
+    "html-react-parser": "^3.0.4",
     "next": "12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
