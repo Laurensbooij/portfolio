@@ -8,7 +8,7 @@ const GridContainer = styled.div`
   grid-gap: 24px;
 
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
-    grid-gap: 40px;
+    grid-gap: 32px;
   }
 `
 
