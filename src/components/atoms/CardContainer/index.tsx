@@ -4,7 +4,7 @@ import { Container } from './styled'
 
 interface cardContainerProps {
   className?: string,
-  children?: JSX.Element | JSX.Element[],
+  children?: JSX.Element | JSX.Element[] | any,
   fullWidth?: boolean,
 }
 
