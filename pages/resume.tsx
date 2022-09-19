@@ -4,7 +4,7 @@ import type { ReactElement } from 'react'
 import client from 'services/getClient'
 
 import { Entry } from 'contentful'
-import { workExperienceDataProps } from 'utilities/contentfulTypes/contentfulTypes'
+import { educationExperienceDataProps, workExperienceDataProps } from 'utilities/contentfulTypes/contentfulTypes'
 
 import Layout from 'components/layouts/standardLayout'
 
@@ -14,27 +14,34 @@ import CtaSection from 'components/molecules/CtaSection'
 import ResumeSection from 'components/organisms/ResumeSection'
 
 export async function getStaticProps() {
-  const res = await client.getEntries({ content_type: "workExperience" })
+  const workExperienceRes = await client.getEntries({ content_type: "workExperience" })
+  const educationExperienceRes = await client.getEntries({ content_type: "educationExperience" })
 
   return {
     props: {
-      workExperience: res.items
+      workExperienceData: workExperienceRes.items,
+      educationExperienceData: educationExperienceRes.items
     }
   }
 }
 
 interface aboutMeProps {
-  workExperience: Entry<workExperienceDataProps>[],
+  workExperienceData: Entry<workExperienceDataProps>[],
+  educationExperienceData: Entry<educationExperienceDataProps>[]
+
 }
 
-const AboutMe: NextPageWithLayout<aboutMeProps> = ({ workExperience }) => (
+const AboutMe: NextPageWithLayout<aboutMeProps> = ({ workExperienceData, educationExperienceData }) => (
   <>
     <Head>
       <title>Laurens Booij</title>
       <meta name="description" content="About me page about Laurens Booij" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
-    <ResumeSection data={workExperience}/>
+    <ResumeSection 
+      workExperienceData={workExperienceData}
+      educationExperienceData={educationExperienceData}
+    />
     <CtaSection 
       title="Curious about my work?"
       buttonText="Take a look at my portolio"

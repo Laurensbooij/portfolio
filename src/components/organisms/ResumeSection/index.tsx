@@ -1,19 +1,22 @@
 import React, { FC } from 'react'
 
 import { Entry } from 'contentful'
-import { workExperienceDataProps } from 'utilities/contentfulTypes/contentfulTypes'
+import { educationExperienceDataProps, workExperienceDataProps } from 'utilities/contentfulTypes/contentfulTypes'
 
 import WorkExperience from './WorkExperience'
+import EducationExperience from './EducationExperience'
 
 import { Container } from './styled'
 
 interface resumeSectionProps {
-  data: Entry<workExperienceDataProps>[],
+  workExperienceData: Entry<workExperienceDataProps>[],
+  educationExperienceData: Entry<educationExperienceDataProps>[]
 }
 
-const ResumeSection: FC<resumeSectionProps> = ({ data }) => (
+const ResumeSection: FC<resumeSectionProps> = ({ workExperienceData, educationExperienceData }) => (
   <Container>
-    <WorkExperience data={data} />
+    {/* <WorkExperience data={workExperienceData} /> */}
+    <EducationExperience data={educationExperienceData} />
   </Container>
 )
 
