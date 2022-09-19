@@ -16,6 +16,17 @@ export interface aboutMeDataProps {
   readonly subtitle: string
 }
 
+export interface educationExperienceDataProps {
+  //Education experience
+  /*  */
+  readonly achievementHighlight?: string
+  readonly dateRange: string
+  readonly educationDescription?: { content: any, data: any, nodeType: string }
+  readonly educationSubtitle?: string
+  readonly educationTitle: string
+  readonly order: number
+}
+
 export interface workExperienceDataProps {
   //Work experience
   /* An instance of a job or work experience to be displayed on your resume */
