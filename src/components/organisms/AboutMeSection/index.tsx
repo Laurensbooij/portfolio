@@ -7,8 +7,6 @@ import PersonalIntroductionCard from './PersonalIntroductionCard'
 import AboutMeContentCard from './AboutMeContentCard'
 import GridContainer from 'components/atoms/GridContainer'
 
-import { Container } from './styled'
-
 interface aboutMeSectionProps {
   data: aboutMeDataProps,
 }
@@ -31,7 +29,7 @@ const AboutMeSection: FC<aboutMeSectionProps> = ({ data }) => {
   
 
   return (
-    <Container>
+    <section>
       <SectionTitle>{sectionTitle}</SectionTitle>
       <GridContainer>
         <PersonalIntroductionCard 
@@ -51,7 +49,7 @@ const AboutMeSection: FC<aboutMeSectionProps> = ({ data }) => {
           text={ambitionsContent.content[0].content[0].value}
         />
       </GridContainer>
-    </Container>
+    </section>
   )
 }
 
