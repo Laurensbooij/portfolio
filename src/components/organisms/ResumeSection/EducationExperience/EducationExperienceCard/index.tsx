@@ -22,8 +22,6 @@ const EducationExperienceCard: FC<educationExperienceCardProps> = ({ data }) => 
     achievementHighlight
   } = data
 
-  console.log(educationDescription)
-
   return (
     <CardContainer>
       {achievementHighlight && <Highlight text={achievementHighlight} />}
