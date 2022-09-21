@@ -17,11 +17,9 @@ const RichText: FC<richTextProps> = ({ content }) => {
       if(item.marks.find((mark: any) => mark.type === 'bold')) {
         return `<b>${item.value}</b>`
       }
-
       if(item.marks.includes('italic')) {
         return `<i>${item.value}</i>`
       }
-    
       else return item.value
     })
 
@@ -33,8 +31,6 @@ const RichText: FC<richTextProps> = ({ content }) => {
 
   const generateListItems = (content: any) => {
 
-    
-    
     const listItems = content.map((item: any, index: number) => <li key={`${index}-${item.nodetype}`}>{extractText(item.content[0].content)}</li>)
     return listItems
   }
