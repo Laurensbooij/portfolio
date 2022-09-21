@@ -11,17 +11,24 @@ interface standardLayoutProps {
 
 const StandardLayout: FC<standardLayoutProps> = ({ children }) => {
   const headerRef = useRef<HTMLElement>(null)
-  const [headerHeightState, setHeaderHeightState] = useState(200)
+  const [headerHeight, setHeaderHeight] = useState(150)
+
+  const navigationRef = useRef<HTMLElement>(null)
+  const [navigationHeight, setNavigationHeight] = useState(180)
 
   useEffect(() => {
-    let headerHeightheaderRef = headerRef.current?.clientHeight
-    let headerHeight = headerHeightheaderRef ? headerHeightheaderRef : 200
-    setHeaderHeightState(headerHeight)
+    let headerHeight = headerRef.current?.clientHeight || 150
+    setHeaderHeight(headerHeight)
+
+    let navigationHeight = navigationRef.current?.clientHeight || 180
+    setNavigationHeight(navigationHeight)
 
     const onResizeHandler = () => {
-      headerHeightheaderRef = headerRef.current?.clientHeight
-      headerHeight = headerHeightheaderRef ? headerHeightheaderRef : 200
-      setHeaderHeightState(headerHeight)
+      headerHeight = headerRef.current?.clientHeight || 150
+      setHeaderHeight(headerHeight)
+
+      navigationHeight = navigationRef.current?.clientHeight || 180
+      setNavigationHeight(navigationHeight)
     }
 
     window.addEventListener("resize", onResizeHandler)
@@ -36,8 +43,8 @@ const StandardLayout: FC<standardLayoutProps> = ({ children }) => {
         subtitle="Aspiring Front-end developer / Product Manager"
         forwardRef={headerRef}
       />
-      <Container headerHeight={headerHeightState}>
-        <Navigation offSetTop={headerHeightState}/>
+      <Container headerHeight={headerHeight} navigationHeight={navigationHeight}>
+        <Navigation forwardRef={navigationRef} offsetTop={headerHeight}/>
         <Main>{children}</Main>
       </Container>
     </>
