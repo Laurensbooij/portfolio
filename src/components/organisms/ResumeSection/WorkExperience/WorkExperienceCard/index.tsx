@@ -45,9 +45,6 @@ const WorkExperienceCard: FC<workExperienceCardProps> = ({ data }) => {
 
   let displayCta: boolean = false
   if (ctaUrl && ctaButtonText) displayCta = true
-  
-  console.log(ctaText)
-  
 
   return (
     <StyledCardContainer>
