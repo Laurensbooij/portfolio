@@ -9,9 +9,10 @@ import { Container } from './styled'
  
 interface educationExperienceProps {
   data: Entry<educationExperienceDataProps>[],
+  inView: boolean,
 }
 
-const EducationExperience: FC<educationExperienceProps> = ({ data }) => {
+const EducationExperience: FC<educationExperienceProps> = ({ data, inView }) => {
 
   const sortedData = data.sort((a, b) => a.fields.order > b.fields.order ? 1 : -1)
   
@@ -23,7 +24,7 @@ const EducationExperience: FC<educationExperienceProps> = ({ data }) => {
   ))
 
   return (
-    <Container>
+    <Container inView={inView} >
       {educationExperienceCards}
     </Container>
   )

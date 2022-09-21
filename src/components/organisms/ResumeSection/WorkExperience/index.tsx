@@ -9,9 +9,10 @@ import { Container } from './styled'
 
 interface workExperienceProps {
   data: Entry<workExperienceDataProps>[]
+  inView: boolean,
 }
 
-const WorkExperience: FC<workExperienceProps> = ({ data }) => {
+const WorkExperience: FC<workExperienceProps> = ({ data, inView }) => {
 
   const sortedData = data.sort((a, b) => a.fields.order > b.fields.order ? 1 : -1)
 
@@ -23,7 +24,7 @@ const WorkExperience: FC<workExperienceProps> = ({ data }) => {
   ))
 
   return (
-    <Container>
+    <Container inView={inView}>
       {workExperienceCards}
     </Container>
   )

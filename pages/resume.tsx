@@ -1,3 +1,5 @@
+import { useContext, useEffect } from 'react'
+
 import type { NextPageWithLayout } from './_app'
 import type { ReactElement } from 'react'
 
@@ -7,6 +9,8 @@ import { Entry } from 'contentful'
 import { educationExperienceDataProps, workExperienceDataProps } from 'utilities/contentfulTypes/contentfulTypes'
 
 import Layout from 'components/layouts/standardLayout'
+
+import { useNavToggleContext } from 'contexts/NavToggleContext'
 
 import Head from 'next/head'
 
@@ -25,13 +29,26 @@ export async function getStaticProps() {
   }
 }
 
-interface aboutMeProps {
+interface resumeProps {
   workExperienceData: Entry<workExperienceDataProps>[],
   educationExperienceData: Entry<educationExperienceDataProps>[]
-
 }
 
-const AboutMe: NextPageWithLayout<aboutMeProps> = ({ workExperienceData, educationExperienceData }) => (
+const Resume: NextPageWithLayout<resumeProps> = ({ workExperienceData, educationExperienceData }) => {
+  const { setToggleVisibility, setToggleContent } = useNavToggleContext()
+
+  const toggleLeftLabel = 'Work'
+  const toggleRightLabel = 'Education'
+
+  useEffect(() => {
+    setToggleVisibility('show')
+    setToggleContent('set', { leftLabel: toggleLeftLabel, rightLabel: toggleRightLabel })
+    return () => {
+      setToggleVisibility('hide')
+    }
+  },[])
+
+  return (
   <>
     <Head>
       <title>Laurens Booij</title>
@@ -48,9 +65,10 @@ const AboutMe: NextPageWithLayout<aboutMeProps> = ({ workExperienceData, educati
       href="/portfolio"
     />
   </>
-)
+  )
+}
 
-AboutMe.getLayout = function getLayout(page: ReactElement) {
+Resume.getLayout = function getLayout(page: ReactElement) {
   return (
     <Layout>
       {page}
@@ -58,4 +76,4 @@ AboutMe.getLayout = function getLayout(page: ReactElement) {
   )
 }
 
-export default AboutMe
+export default Resume

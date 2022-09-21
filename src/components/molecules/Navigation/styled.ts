@@ -7,10 +7,11 @@ interface containerProps {
 }
 
 export const Container = styled.nav<containerProps>`
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 0 12px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
   position: fixed;
+  gap: 16px;
   bottom: 0;
   left: 0;
   width: 100vw;
@@ -18,13 +19,22 @@ export const Container = styled.nav<containerProps>`
   background: linear-gradient(180deg, rgba(250,250,250,0) 0%, rgba(250,250,250,1) 45%);
 
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
-    grid-template-columns: 1fr;
-    grid-auto-rows: min-content;
-    grid-gap: 20px 0;
     top: calc(80px + ${props => props.offsetTop}px);
     left: 80px;
     width: 280px;
     padding: 0;
     background: none;
+  }
+`
+
+export const ButtonContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0 12px;
+
+  @media (min-width: ${themeStyles.breakpoints.desktop}) {
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    grid-gap: 20px 0;
   }
 `
