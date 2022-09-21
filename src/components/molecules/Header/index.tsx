@@ -3,12 +3,12 @@ import React, { FC } from 'react'
 import { Container, Title, Subtitle } from './styled'
 
 interface HeaderProps {
+    forwardRef?: any,
     title: string,
     subtitle: string,
-    forwardRef: any,
 }
 
-const Header: FC<HeaderProps> = ({ title, subtitle, forwardRef }) => (
+const Header: FC<HeaderProps> = ({ forwardRef, title, subtitle }) => (
     <Container ref={forwardRef}>
         <Title>{title}</Title>
         <Subtitle>{subtitle}</Subtitle>
