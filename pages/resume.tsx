@@ -24,7 +24,7 @@ export async function getStaticProps() {
   return {
     props: {
       workExperienceData: workExperienceRes.items,
-      educationExperienceData: educationExperienceRes.items
+      educationExperienceData: educationExperienceRes.items,
     }
   }
 }

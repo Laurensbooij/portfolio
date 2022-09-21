@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 
 import { workExperienceDataProps } from 'utilities/contentfulTypes/contentfulTypes'
 
-import JobRoleDescription from './JobRoleDescription'
+import JobRoles from './JobRoles'
 import Cta from './Cta'
 
 import { 
@@ -17,7 +17,6 @@ import {
   Duration,
   Daterange,
   ContentContainer,
-  JobRoleContainer
 } from './styled'
 
 interface workExperienceCardProps {
@@ -30,21 +29,13 @@ const WorkExperienceCard: FC<workExperienceCardProps> = ({ data }) => {
     companyDescription,
     companyLogo,
     companyName,
-    ctaButtonText,
-    ctaText,
-    ctaUrl,
-    jobRole1,
-    jobRoleDescription1,
-    jobRoleSubtitle1,
-    jobRole2,
-    jobRoleDescription2,
-    jobRoleSubtitle2,
+    cta,
+    jobRoles,
     workDuration,
-    workDurationPeriod
+    workDurationPeriod,
   } = data
 
-  let displayCta: boolean = false
-  if (ctaUrl && ctaButtonText) displayCta = true
+  console.log(jobRoles)
 
   return (
     <StyledCardContainer>
@@ -62,30 +53,9 @@ const WorkExperienceCard: FC<workExperienceCardProps> = ({ data }) => {
         </FlexContainer>
       </MetadataContainer>
       <ContentContainer>
-        <JobRoleContainer>
-          {jobRole1 && (
-            <JobRoleDescription 
-              title={jobRole1}
-              subtitle={jobRoleSubtitle1}
-              description={jobRoleDescription1}
-              indented={!!jobRole2}
-            />
-          )}
-          {jobRole2 && (
-            <JobRoleDescription 
-              title={jobRole2}
-              subtitle={jobRoleSubtitle2}
-              description={jobRoleDescription2}
-              indented={!!jobRole2}
-            />
-          )}
-        </JobRoleContainer>
-        {(ctaButtonText && ctaUrl) && (
-          <Cta 
-            text={ctaText?.content}
-            buttonText={ctaButtonText}
-            href={ctaUrl}
-          />
+        <JobRoles jobRoles={jobRoles} />
+        {cta && (
+          <Cta data={cta.fields} />
         )}
       </ContentContainer>
     </StyledCardContainer>
