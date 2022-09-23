@@ -18,7 +18,6 @@ const AboutMeSection: FC<aboutMeSectionProps> = ({ data }) => {
     ambitionsIcon,
     ambitionsTitle,
     name,
-    sectionTitle,
     personalIntroduction,
     personalPhoto,
     personalValuesContent,
@@ -30,7 +29,7 @@ const AboutMeSection: FC<aboutMeSectionProps> = ({ data }) => {
 
   return (
     <section>
-      <SectionTitle>{sectionTitle}</SectionTitle>
+      <SectionTitle>About me</SectionTitle>
       <GridContainer>
         <PersonalIntroductionCard 
           title={name}
