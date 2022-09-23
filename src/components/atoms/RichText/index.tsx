@@ -1,9 +1,9 @@
 import React, { FC } from 'react'
 import parse from 'html-react-parser'
 
-import { H1, H2, H3, H4, H5, H6, BodyText } from '../TextElements'
+import { H1, H2, H3, H4, H5, H6, BodyText, UnorderedList } from '../TextElements'
 
-import { Container, Ul } from './styled'
+import { Container } from './styled'
 
 interface richTextProps {
   content: any,
@@ -59,7 +59,7 @@ const RichText: FC<richTextProps> = ({ content }) => {
       case 'unordered-list':
         const listItems = generateListItems(node.content)
         return (
-          <Ul key={`${index}-${node.nodetype}`}>{listItems}</Ul>
+          <UnorderedList key={`${index}-${node.nodetype}`}>{listItems}</UnorderedList>
         )
         break
       default:
