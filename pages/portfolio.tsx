@@ -4,7 +4,6 @@ import type { ReactElement } from 'react'
 import Layout from 'components/layouts/standardLayout'
 
 import Head from 'next/head'
-import Header from 'components/molecules/Header'
 
 const AboutMe: NextPageWithLayout = () => (
   <>
