@@ -12,8 +12,17 @@ export interface aboutMeDataProps {
   readonly personalValuesContent: { content: any, data: any, nodeType: string }
   readonly personalValuesIcon: Asset
   readonly personalValuesTitle: string
-  readonly sectionTitle: string
   readonly subtitle: string
+}
+
+export interface bookListDataProps {
+  //Book list
+  /* Books I've read */
+  readonly authors: string
+  readonly coverImage: Asset
+  readonly keyTakeaways?: ReadonlyArray<string>
+  readonly summary: string
+  readonly title: string
 }
 
 export interface educationExperienceDataProps {
@@ -59,7 +68,6 @@ export interface skillsetLegendDataProps {
   readonly legendLabel2: string
   readonly legendLabel3: string
   readonly legendTitle: string
-  readonly sectionTitle: string
   readonly textContent: { content: any, data: any, nodeType: string }
 }
 
