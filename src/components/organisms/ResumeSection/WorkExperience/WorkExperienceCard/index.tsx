@@ -35,8 +35,6 @@ const WorkExperienceCard: FC<workExperienceCardProps> = ({ data }) => {
     workDurationPeriod,
   } = data
 
-  console.log(jobRoles)
-
   return (
     <StyledCardContainer>
       <MetadataContainer>
