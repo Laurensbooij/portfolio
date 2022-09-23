@@ -1,40 +1,44 @@
 import React, { FC } from 'react'
 
+import { skillsetDataProps } from 'utilities/contentfulTypes/contentfulTypes'
+
 import CardContainer from 'components/atoms/CardContainer'
 import SkillLabel from '../SkillLabel'
 
 import { TextContainer, Title, Subtitle, SkillsContainer } from './styled'
 
-const SkillsetCard = (  ) => (
-  <CardContainer>
-    <TextContainer>
-      <Title>Front-end development</Title>
-      <Subtitle>Tools: Visual Studio Code, Git, CLI, React.js, Next.js</Subtitle>
-    </TextContainer>
-    <SkillsContainer>
-      <SkillLabel 
-        label="HTML/CSS"
-        skillLevel={3}
-      />
-      <SkillLabel 
-        label="Javascript"
-        skillLevel={3}
-      />
-      <SkillLabel 
-        label="React"
-        skillLevel={3}
-        annotation="Experience with ..."
-      />
-      <SkillLabel 
-        label="Next.js"
-        skillLevel={2}
-      />
-      <SkillLabel 
-        label="Typescript"
-        skillLevel={2}
-      />
-    </SkillsContainer>
-  </CardContainer>
-)
+interface skillsetCardProps {
+  data: skillsetDataProps,
+}
+
+const SkillsetCard: FC<skillsetCardProps> = ({ data }) => {
+
+  const {
+    title,
+    subtitle,
+    skills,
+  } = data
+
+  const skillLabels = skills.map((skill) => (
+    <SkillLabel 
+      key={skill.sys.id}
+      label={skill.fields.skillName}
+      skillLevel={skill.fields.skillLevel}
+      annotation={skill.fields.subtitle}
+    />
+  ))
+
+  return (
+    <CardContainer>
+      <TextContainer>
+        <Title>{title}</Title>
+        <Subtitle>{subtitle}</Subtitle>
+      </TextContainer>
+      <SkillsContainer>
+        {skillLabels}
+      </SkillsContainer>
+    </CardContainer>
+  )
+}
 
 export default SkillsetCard 

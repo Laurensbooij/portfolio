@@ -11,10 +11,6 @@ export const Title = styled(H3)`
   margin: 0 0 1rem 0;
 `
 
-export const Text = styled(BodyText)`
-  margin: 0;
-`
-
 export const LegendContainer = styled.div`
   display: flex;
   flex-direction: column;

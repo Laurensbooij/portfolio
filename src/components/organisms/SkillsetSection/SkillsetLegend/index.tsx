@@ -1,32 +1,34 @@
 import React, { FC } from 'react'
 
-import SkillLabel from '../SkillLabel'
+import { skillsetLegendDataProps } from 'utilities/contentfulTypes/contentfulTypes'
 
 import CardContainer from 'components/atoms/CardContainer'
+import RichText from 'components/atoms/RichText'
+import SkillLabel from '../SkillLabel'
 
-import { TextContainer, Title, Text, LegendContainer } from './styled'
+import { TextContainer, Title, LegendContainer } from './styled'
 
 interface skillsetLegendProps {
-
+  data: skillsetLegendDataProps,
 }
 
-const SkillsetLegend: FC<skillsetLegendProps> = (  ) => (
+const SkillsetLegend: FC<skillsetLegendProps> = ({ data }) => (
   <CardContainer fullWidth>
     <TextContainer>
-      <Title>Legend</Title>
-      <Text>Lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, lorem ipsum dolor sit amet</Text>
+      <Title>{data.legendTitle}</Title>
+      <RichText content={data.textContent.content}/>
     </TextContainer>
     <LegendContainer>
       <SkillLabel
-        label="Basic knowledge / skills"
+        label={data.legendLabel1}
         skillLevel={1}
       />
       <SkillLabel
-        label="Advanced knowledge / skills"
+        label={data.legendLabel2}
         skillLevel={2}
       />
       <SkillLabel
-        label="One of my strong points"
+        label={data.legendLabel3}
         skillLevel={3}
       />
     </LegendContainer>

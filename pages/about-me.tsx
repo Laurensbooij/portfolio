@@ -5,7 +5,8 @@ import client from 'services/getClient'
 
 import Head from 'next/head'
 
-import { aboutMeDataProps } from 'utilities/contentfulTypes/contentfulTypes'
+import { Entry } from 'contentful'
+import { aboutMeDataProps, skillsetDataProps, skillsetLegendDataProps } from 'utilities/contentfulTypes/contentfulTypes'
 
 import Layout from 'components/layouts/standardLayout'
 
@@ -14,21 +15,27 @@ import SkillsetSection from 'components/organisms/SkillsetSection'
 import CtaSection from 'components/molecules/CtaSection'
 
 export async function getStaticProps() {
-
-  const res = await client.getEntries<aboutMeDataProps>({ content_type: "aboutMe" })
+  
+  const aboutMeRes = await client.getEntries<aboutMeDataProps>({ content_type: "aboutMe" })
+  const skillsetLegendRes = await client.getEntries<skillsetLegendDataProps>({ content_type: "skillsetLegend" })
+  const skillsetRes = await client.getEntries<skillsetDataProps>({ content_type: "skillset" })
 
   return {
     props: {
-      aboutMeData: res.items[0].fields
+      aboutMeData: aboutMeRes.items[0].fields,
+      skillsetLegendData: skillsetLegendRes.items[0].fields,
+      skillsetData: skillsetRes.items,
     }
   }
 }
 
 interface aboutMeProps {
-  aboutMeData: any,
+  aboutMeData: aboutMeDataProps,
+  skillsetLegendData: skillsetLegendDataProps,
+  skillsetData: Entry<skillsetDataProps>[],
 }
 
-const AboutMe: NextPageWithLayout<aboutMeProps> = ({ aboutMeData }) => (
+const AboutMe: NextPageWithLayout<aboutMeProps> = ({ aboutMeData, skillsetLegendData, skillsetData}) => (
   <>
     <Head>
       <title>Laurens Booij</title>
@@ -36,7 +43,7 @@ const AboutMe: NextPageWithLayout<aboutMeProps> = ({ aboutMeData }) => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <AboutMeSection data={aboutMeData} />
-    <SkillsetSection/>
+    <SkillsetSection legendData={skillsetLegendData} skillsetData={skillsetData} />
     <CtaSection 
       title="Curious about my experience and education?"
       buttonText="Take a look at my resume"
