@@ -28,7 +28,7 @@ const Toggle: FC<toggleProps> = ({ offsetTop }) => {
 
 
   return (
-    <Container clientWidth={clientWidth} offsetTop={offsetTop} display={showToggle}>
+    <Container clientWidth={clientWidth} offsetTop={offsetTop} showToggle={showToggle}>
       <ActiveIndicator toggled={toggled} />
       <Label onClick={() => switchToggle(false)} active={!toggled}>{toggleLabels.left}</Label>
       <Label onClick={() => switchToggle(true)} active={toggled}>{toggleLabels.right}</Label>

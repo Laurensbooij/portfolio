@@ -37,12 +37,12 @@ interface resumeProps {
 const Resume: NextPageWithLayout<resumeProps> = ({ workExperienceData, educationExperienceData }) => {
   const { setToggleVisibility, setToggleContent } = useNavToggleContext()
 
-  const toggleLeftLabel = 'Work'
-  const toggleRightLabel = 'Education'
+  const toggleLabelLeft = 'Work'
+  const toggleLabelRight = 'Education'
 
   useEffect(() => {
     setToggleVisibility('show')
-    setToggleContent('set', { leftLabel: toggleLeftLabel, rightLabel: toggleRightLabel })
+    setToggleContent('set', { leftLabel: toggleLabelLeft, rightLabel: toggleLabelRight })
     return () => {
       setToggleVisibility('hide')
     }

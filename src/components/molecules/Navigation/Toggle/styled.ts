@@ -6,7 +6,7 @@ import { BodyTextSmall } from 'components/atoms/TextElements'
 
 interface containerProps {
   clientWidth: number,
-  display: boolean,
+  showToggle: boolean,
   offsetTop: number,
 }
 
@@ -22,9 +22,9 @@ export const Container = styled.div<containerProps>`
   border: 2px solid ${themeStyles.colors.grey3};
   border-radius: 50px;
   box-shadow: ${themeStyles.shadows.dropShadow};
-  translate: ${props => props.display ? '0 0' : '0 100%'};
-  opacity: ${props => props.display ? '1' : '0'};
-  transition: all 300ms ease;
+  translate: ${props => props.showToggle ? '0 0' : '0 100%'};
+  opacity: ${props => props.showToggle ? '1' : '0'};
+  transition: all 400ms ease;
 
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
     position: fixed;
