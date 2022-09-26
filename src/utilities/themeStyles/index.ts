@@ -1,10 +1,15 @@
 import { DefaultTheme } from 'styled-components';
 
+const gradientSetAngleHandler = (angle: number) => {
+  return `linear-gradient(${angle}deg, rgba(95,36,221,1) 0%, rgba(101,81,236,1) 100%)`
+}
+
 const themeStyles: DefaultTheme = {
   colors: {
     primary: 'rgba(81,42,163,1)',
     secondary: 'rgba(246,166,0,1)',
     gradient: 'linear-gradient(5deg, rgba(95,36,221,1) 0%, rgba(101,81,236,1) 100%)',
+    gradientWithCustomAngle: gradientSetAngleHandler,
     primaryText: 'rgba(55,50,67,1)',
     grey1: 'rgba(179,179,179,1)',
     grey2: 'rgba(214,214,214,1)',

@@ -8,6 +8,7 @@ declare module 'styled-components' {
         primary: string;
         secondary: string;
         gradient: string;
+        gradientWithCustomAngle: (angle: number) => string,
         primaryText: string;
         grey1: string;
         grey2: string;
