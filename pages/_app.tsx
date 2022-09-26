@@ -5,6 +5,7 @@ import type { NextPage } from 'next'
 import type { AppProps } from 'next/app'
 
 import NavToggleContextProvider from 'contexts/NavToggleContext'
+import PositioningDimensionsContextProvider from 'contexts/PositioningDimensionsContext'
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode
@@ -24,7 +25,9 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 
   return (
     <NavToggleContextProvider>
-      {LayoutPage}
+      <PositioningDimensionsContextProvider>
+        {LayoutPage}
+      </PositioningDimensionsContextProvider>
     </NavToggleContextProvider>
   )
 }
