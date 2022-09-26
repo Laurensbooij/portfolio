@@ -29,10 +29,10 @@ const NavToggleContextProvider: FC<navToggleContextProviderProps> = ({ children 
 
   const setToggleVisibility = (action: string) => {
     switch(action) {
-      case 'show':
+      case 'SHOW':
         setNavToggleState(prevState => ({...prevState, showToggle: true }))
         break
-      case 'hide':
+      case 'HIDE':
         setNavToggleState(prevState => ({...prevState, showToggle: false }))
         break
       default:
@@ -51,7 +51,7 @@ const NavToggleContextProvider: FC<navToggleContextProviderProps> = ({ children 
 
   const setToggleContent = ( action: string, payload: { leftLabel: string, rightLabel: string } ) => {
     switch(action) {
-      case 'set':
+      case 'SET':
         setNavToggleState(prevState => ({
           ...prevState, 
           toggleLabels: {
@@ -60,7 +60,7 @@ const NavToggleContextProvider: FC<navToggleContextProviderProps> = ({ children 
           },
         }))
         break
-      case 'clear':
+      case 'CLEAR':
         setNavToggleState(prevState => ({
           ...prevState, 
           toggleLabels: {

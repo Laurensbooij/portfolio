@@ -41,10 +41,10 @@ const Resume: NextPageWithLayout<resumeProps> = ({ workExperienceData, education
   const toggleLabelRight = 'Education'
 
   useEffect(() => {
-    setToggleVisibility('show')
-    setToggleContent('set', { leftLabel: toggleLabelLeft, rightLabel: toggleLabelRight })
+    setToggleVisibility('SHOW')
+    setToggleContent('SET', { leftLabel: toggleLabelLeft, rightLabel: toggleLabelRight })
     return () => {
-      setToggleVisibility('hide')
+      setToggleVisibility('HIDE')
     }
   },[])
 
