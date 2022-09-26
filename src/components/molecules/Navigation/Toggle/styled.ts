@@ -32,6 +32,7 @@ export const Container = styled.div<containerProps>`
     top: ${props => props.offsetTop + 32}px;
     height: 48px;
     translate: -50% 0;
+    display: ${props => props.showToggle ? 'flex' : 'none'};
     transition: none;
   }
 `
