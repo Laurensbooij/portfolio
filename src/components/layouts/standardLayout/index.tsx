@@ -1,5 +1,7 @@
 import React, { FC, useEffect, useRef, useState } from 'react'
 
+import { usePositioningDimensionsContext } from 'contexts/PositioningDimensionsContext'
+
 import Header from 'components/molecules/Header'
 import Navigation from 'components/molecules/Navigation'
 
@@ -11,24 +13,34 @@ interface standardLayoutProps {
 
 const StandardLayout: FC<standardLayoutProps> = ({ children }) => {
   const headerRef = useRef<HTMLElement>(null)
-  const [headerHeight, setHeaderHeight] = useState(150)
+  const { positioningDimensions, setPositioningDimensions } = usePositioningDimensionsContext()
+  const { headerHeight } = positioningDimensions
 
   const navigationRef = useRef<HTMLElement>(null)
   const [navigationHeight, setNavigationHeight] = useState(180)
 
-  useEffect(() => {
+  const setPositioningDimensionsHandler = () => {
     let headerHeight = headerRef.current?.clientHeight || 150
-    setHeaderHeight(headerHeight)
+    let clientWidth = window.innerWidth
 
+    setPositioningDimensions({ 
+      headerHeight: headerHeight,
+      clientWidth: clientWidth,
+    })
+  }
+
+  const setNavigationHeightHandler = () => {
     let navigationHeight = navigationRef.current?.clientHeight || 180
     setNavigationHeight(navigationHeight)
+  }
+
+  useEffect(() => {
+    setPositioningDimensionsHandler()
+    setNavigationHeightHandler()
 
     const onResizeHandler = () => {
-      headerHeight = headerRef.current?.clientHeight || 150
-      setHeaderHeight(headerHeight)
-
-      navigationHeight = navigationRef.current?.clientHeight || 180
-      setNavigationHeight(navigationHeight)
+      setPositioningDimensionsHandler()
+      setNavigationHeightHandler()
     }
 
     window.addEventListener("resize", onResizeHandler)

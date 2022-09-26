@@ -1,6 +1,7 @@
 import React, { FC, useEffect, useState } from 'react'
 
 import { useNavToggleContext } from 'contexts/NavToggleContext'
+import { usePositioningDimensionsContext } from 'contexts/PositioningDimensionsContext'
 
 import { Container, ActiveIndicator, Label } from './styled'
 
@@ -12,20 +13,8 @@ const Toggle: FC<toggleProps> = ({ offsetTop }) => {
   const { navToggleState, switchToggle } = useNavToggleContext()
   const { showToggle, toggled, toggleLabels } = navToggleState
 
-  const [clientWidth, setClientWidth] = useState(0)
-
-  const windowResizeHandler = () => {
-    setClientWidth(window.innerWidth)
-  }
-  
-  useEffect(() => {
-    windowResizeHandler()
-    window.addEventListener('resize', windowResizeHandler)
-    return () => {
-      window.removeEventListener('resize', windowResizeHandler)
-    }
-  }, [])
-
+  const { positioningDimensions } = usePositioningDimensionsContext()
+  const { clientWidth } = positioningDimensions 
 
   return (
     <Container clientWidth={clientWidth} offsetTop={offsetTop} showToggle={showToggle}>
