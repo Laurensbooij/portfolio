@@ -4,6 +4,7 @@ import { usePositioningDimensionsContext } from 'contexts/PositioningDimensionsC
 
 import Header from 'components/molecules/Header'
 import Navigation from 'components/molecules/Navigation'
+import BackToTopLink from 'components/atoms/BackToTopLink'
 
 import { Container, Main } from './styled'
 
@@ -57,7 +58,10 @@ const StandardLayout: FC<standardLayoutProps> = ({ children }) => {
       />
       <Container headerHeight={headerHeight} navigationHeight={navigationHeight}>
         <Navigation forwardRef={navigationRef} offsetTop={headerHeight}/>
-        <Main>{children}</Main>
+        <Main>
+          {children}
+          <BackToTopLink/>
+        </Main>
       </Container>
     </>
   )
