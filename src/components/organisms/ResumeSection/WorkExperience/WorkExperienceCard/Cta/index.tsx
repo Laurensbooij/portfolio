@@ -3,7 +3,7 @@ import React, { FC } from 'react'
 import { workExperienceCtaDataProps } from 'utilities/contentfulTypes/contentfulTypes'
 
 import RichText from 'components/atoms/RichText'
-import Button from 'components/atoms/Button'
+import Button from 'components/atoms/Buttons/Button'
 
 import { Container } from './styled'
 
@@ -21,7 +21,7 @@ const Cta: FC<ctaProps> = ({ data }) => {
 
   return (
     <Container>
-      {content && <RichText content={content.content} />}
+      {content && <RichText content={content.content}/>}
       <Button href={slug}>{buttonText}</Button>
     </Container>
   )

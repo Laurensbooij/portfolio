@@ -104,9 +104,3 @@ export const ContentContainer = styled.div`
   flex-direction: column;
   gap: 32px;
 `
-
-export const JobRoleContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-`
