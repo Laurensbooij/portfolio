@@ -15,6 +15,7 @@ declare module 'styled-components' {
         grey3: string;
         grey4: string;
         white: string;
+        overlayBackground: string;
     };
     shadows: {
       dropShadow: string;
