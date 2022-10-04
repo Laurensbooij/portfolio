@@ -44,6 +44,19 @@ export interface jobRoleDataProps {
   readonly title: string
 }
 
+export interface portfolioCaseDataProps {
+  //Portfolio case
+  /* A case in my portfolio. */
+  readonly caseCategories: ReadonlyArray<string>
+  readonly caseContent: { content: any, data: any, nodeType: string }
+  readonly casePreviewImage: Asset
+  readonly caseSummary: string
+  readonly detailPageSlug: string
+  readonly order: number
+  readonly subtitle: string
+  readonly title: string
+}
+
 export interface skillDataProps {
   //Skill
   /* An instance of a skill, to be embedded in a Skillset */
