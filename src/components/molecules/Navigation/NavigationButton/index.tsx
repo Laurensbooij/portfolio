@@ -11,7 +11,7 @@ interface NavigationButtonProps {
 }
 
 const NavigationButton: FC<NavigationButtonProps> = ({ active, iconUrl, text, url }) => (
-  <Link href={url}>
+  <Link href={url} passHref>
     <Container active={active}>
       <Icon iconUrl={iconUrl} />
       <Text active={active}>{text}</Text>

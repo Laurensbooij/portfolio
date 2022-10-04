@@ -16,7 +16,7 @@ export const Container = styled.div<containerProps>`
   align-self: center;
   position: relative;
   height: 40px;
-  width: 100%;
+  width: calc(100vw - 24px);
   max-width: 500px;
   background: ${themeStyles.colors.white};
   border: 2px solid ${themeStyles.colors.grey3};
@@ -29,7 +29,7 @@ export const Container = styled.div<containerProps>`
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
     position: fixed;
     left: ${props => ((props.clientWidth - 500) / 2) + 420}px;
-    top: ${props => props.offsetTop + 32}px;
+    top: -50px;
     height: 48px;
     translate: -50% 0;
     display: ${props => props.showToggle ? 'flex' : 'none'};

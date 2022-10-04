@@ -24,32 +24,23 @@ export const Container = styled.div<containerProps>`
   position: relative;
   overflow: hidden;
   padding: 12px;
-  background: ${themeStyles.colors.white};
+  background: ${props => props.active ? themeStyles.colors.primary : themeStyles.colors.white};
   box-shadow: ${themeStyles.shadows.dropShadow};
   border-radius: 8px;
   cursor: pointer;
-
-  &:after {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: ${themeStyles.colors.gradient};
-    opacity: 0;
-    transition: all 0.3s ease;
-
-    ${props => props.active && `
-    opacity: 1;
-  `}
-  }
+  transition: all 400ms ease, border 0ms ease;
 
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
-      flex-direction: row;
-      justify-content: flex-start;
-      padding: 32px 24px;
-    }
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 16px 24px;
+    border-radius: 0 8px 8px 0;
+    border: 4px solid ${props => props.active ? themeStyles.colors.primary : themeStyles.colors.white};
+
+    &:hover {
+      border-color: ${themeStyles.colors.primary};
+  }
+  }
 `
 
 export const Icon = styled.div<iconProps>`
@@ -57,15 +48,14 @@ export const Icon = styled.div<iconProps>`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 2rem;
-  height: 2rem;
+  width: 32px;
+  height: 32px;
   background-image: url(${props => props.iconUrl});
   background-repeat: no-repeat;
   background-size: cover;
 
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
-    width: 2.5rem;
-    height: 2.5rem;
+    order: 2;
   }
 `
 

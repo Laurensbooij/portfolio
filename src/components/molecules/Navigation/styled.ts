@@ -20,10 +20,11 @@ export const Container = styled.nav<containerProps>`
 
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
     top: calc(80px + ${props => props.offsetTop}px);
-    left: 80px;
-    width: 280px;
+    left: 0;
+    width: 244px;
     padding: 0;
     background: none;
+    translate: -4px 0;
   }
 `
 

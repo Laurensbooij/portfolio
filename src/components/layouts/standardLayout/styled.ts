@@ -16,7 +16,7 @@ export const Container = styled.div<containerProps>`
 
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
     width: auto;
-    margin-left: 360px;
+    margin-left: 240px;
     margin-bottom: 0;
     padding: 80px 80px 120px;
   }
