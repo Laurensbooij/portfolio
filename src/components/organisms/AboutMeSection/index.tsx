@@ -8,10 +8,10 @@ import AboutMeContentCard from './AboutMeContentCard'
 import GridContainer from 'components/atoms/GridContainer'
 
 interface aboutMeSectionProps {
-  data: aboutMeDataProps,
+  aboutMeData: aboutMeDataProps,
 }
 
-const AboutMeSection: FC<aboutMeSectionProps> = ({ data }) => {
+const AboutMeSection: FC<aboutMeSectionProps> = ({ aboutMeData }) => {
 
   const {
     ambitionsContent,
@@ -24,7 +24,7 @@ const AboutMeSection: FC<aboutMeSectionProps> = ({ data }) => {
     personalValuesIcon,
     personalValuesTitle,
     subtitle,
-  } = data
+  } = aboutMeData
   
 
   return (

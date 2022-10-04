@@ -15,7 +15,7 @@ import SkillsetSection from 'components/organisms/SkillsetSection'
 import CtaSection from 'components/molecules/CtaSection'
 
 export async function getStaticProps() {
-  
+
   const aboutMeRes = await client.getEntries<aboutMeDataProps>({ content_type: "aboutMe" })
   const skillsetLegendRes = await client.getEntries<skillsetLegendDataProps>({ content_type: "skillsetLegend" })
   const skillsetRes = await client.getEntries<skillsetDataProps>({ content_type: "skillset" })
@@ -42,7 +42,7 @@ const AboutMe: NextPageWithLayout<aboutMeProps> = ({ aboutMeData, skillsetLegend
       <meta name="description" content="About me page about Laurens Booij" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
-    <AboutMeSection data={aboutMeData} />
+    <AboutMeSection aboutMeData={aboutMeData} />
     <SkillsetSection legendData={skillsetLegendData} skillsetData={skillsetData} />
     <CtaSection 
       title="Curious about my experience and education?"
