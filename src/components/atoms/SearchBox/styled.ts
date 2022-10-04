@@ -33,6 +33,7 @@ export const Input = styled.input<inputProps>`
   align-items: center;
   font-family: 'Montserrat', Roboto, Helvetica Neue, sans-serif;
   font-size: 1rem;
+  color: ${themeStyles.colors.primaryText};
   height: 100%;
   width: 100%;
   padding: 0 16px;
