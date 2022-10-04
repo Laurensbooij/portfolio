@@ -1,21 +1,43 @@
 import type { NextPageWithLayout } from './_app'
 import type { ReactElement } from 'react'
 
+import client from 'services/getClient'
+
+import { Entry } from 'contentful'
+import { portfolioCaseDataProps } from 'utilities/contentfulTypes/contentfulTypes'
+
 import Layout from 'components/layouts/standardLayout'
 
 import Head from 'next/head'
 
-const AboutMe: NextPageWithLayout = () => (
+import PortfolioSection from 'components/organisms/PortolioSection'
+
+export async function getStaticProps() {
+  const PortfolioCasesRes = await client.getEntries({ content_type: "portfolioCase" })
+
+  return {
+    props: {
+      portfolioCasesData: PortfolioCasesRes.items,
+    }
+  }
+}
+
+interface portfolioProps {
+  portfolioCasesData: Entry<portfolioCaseDataProps>[],
+}
+
+const Portfolio: NextPageWithLayout<portfolioProps> = ({ portfolioCasesData }) => (
   <>
     <Head>
       <title>Laurens Booij</title>
       <meta name="description" content="About me page about Laurens Booij" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
+    <PortfolioSection portfolioCasesData={portfolioCasesData} />
   </>
 )
 
-AboutMe.getLayout = function getLayout(page: ReactElement) {
+Portfolio.getLayout = function getLayout(page: ReactElement) {
   return (
     <Layout>
       {page}
@@ -23,4 +45,4 @@ AboutMe.getLayout = function getLayout(page: ReactElement) {
   )
 }
 
-export default AboutMe
+export default Portfolio
