@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 
-import Button from 'components/atoms/Button'
+import Button from 'components/atoms/Buttons/Button'
 
 import { Container, Title } from './styled'
 
