@@ -5,7 +5,7 @@ import themeStyles from 'utilities/themeStyles'
 import CardContainer from 'components/atoms/CardContainer'
 import { H5, BodyText, BodyTextSmall } from 'components/atoms/TextElements'
 
-import chevronIcon from 'media/icons/icon-chevron.png'
+import chevronIcon from 'media/icons/icon-chevron-grey2.png'
 
 interface styledCardContainerProps {
   expanded: boolean,

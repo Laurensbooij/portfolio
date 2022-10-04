@@ -5,16 +5,18 @@ import { usePositioningDimensionsContext } from 'contexts/PositioningDimensionsC
 import { Entry } from 'contentful'
 import { bookListDataProps } from 'utilities/contentfulTypes/contentfulTypes'
 
-import GridContainer from 'components/atoms/GridContainer'
-import BookListItem from './BookListItem'
+import BookList from './BookList'
+import BookSuggestionForm from './BookSuggestionForm'
 
-import { Container, StyledSearchBox } from './styled'
+import { Container, EmptySearchNotification, StyledSearchBox } from './styled'
 
 interface bookListSectionProps {
   bookListData: Entry<bookListDataProps>[],
 }
 
 const BookListSection: FC<bookListSectionProps> = ({ bookListData }) => {
+
+  const { positioningDimensions } = usePositioningDimensionsContext()
 
   const [sortedBookListData, setSortedBookListData] = useState(bookListData)
 
@@ -49,14 +51,7 @@ const BookListSection: FC<bookListSectionProps> = ({ bookListData }) => {
     setFilteredBookListData(sortedBookListData)
   }
 
-  const { positioningDimensions } = usePositioningDimensionsContext()
-
-  const bookListItems = filteredBookListData.map((book: Entry<bookListDataProps>) => (
-    <BookListItem 
-      key={book.sys.id}
-      data={book.fields}
-    />
-  ))
+  const EmptySearchMessage = "It looks like I didn't read the book you're looking for yet. If you think I should you can submit it as a suggesiton down below!"
 
   return (
     <Container>
@@ -68,9 +63,10 @@ const BookListSection: FC<bookListSectionProps> = ({ bookListData }) => {
         clientWidth={positioningDimensions.clientWidth}
         offsetTop={positioningDimensions.headerHeight}
       />
-      <GridContainer>
-        {bookListItems}
-      </GridContainer>
+      {filteredBookListData.length > 0 ?
+      <BookList bookListData={filteredBookListData}/> :
+      <EmptySearchNotification>{EmptySearchMessage}</EmptySearchNotification>}
+      <BookSuggestionForm />
     </Container>
   )
 }
