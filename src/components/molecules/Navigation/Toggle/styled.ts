@@ -46,7 +46,7 @@ export const ActiveIndicator = styled.div<activeIndicatorProps>`
   width: 50%;
   height: 100%;
   border-radius: 50px;
-  background: ${themeStyles.colors.gradient};
+  background: ${themeStyles.colors.primary};
   transition: 400ms all ease;
   left: ${props => props.toggled ? `50%` : `0`};
 `

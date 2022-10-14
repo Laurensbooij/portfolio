@@ -19,7 +19,7 @@ export const IconContainer = styled.div`
   width: 48px;
   padding: 8px;
   border-radius: 8px;
-  background: ${themeStyles.colors.gradient};
+  background: ${themeStyles.colors.primary};
 
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
     height: 60px;
@@ -38,9 +38,5 @@ export const Icon = styled.div<iconProps>`
 `
 
 export const Title = styled(H3)`
-  margin: 0;
-`
-
-export const Text = styled(BodyText)`
   margin: 0;
 `

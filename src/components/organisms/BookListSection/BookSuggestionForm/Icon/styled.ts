@@ -12,7 +12,7 @@ export const Container = styled.div`
   top: -40px;
   height: 80px;
   width: 80px;
-  background: ${themeStyles.colors.gradient};
+  background: ${themeStyles.colors.primary};
   border-radius: 50%;
 
   @media (min-width: ${themeStyles.breakpoints.desktop}) {

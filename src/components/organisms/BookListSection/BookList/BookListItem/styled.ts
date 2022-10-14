@@ -46,7 +46,7 @@ export const GridContainer = styled.div`
       "image summary";
     grid-template-columns: 120px auto;
     grid-template-rows: auto 1fr;
-    column-gap: 20px;
+    column-gap: 24px;
     row-gap: 12px;
   }
 `
@@ -54,6 +54,7 @@ export const GridContainer = styled.div`
 export const CoverImage = styled.img`
   grid-area: image;
   width: 100px;
+  border: 2px solid ${themeStyles.colors.grey3};
   border-radius: 8px;
   box-shadow: ${themeStyles.shadows.dropShadow};
   

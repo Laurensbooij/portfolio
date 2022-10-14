@@ -23,7 +23,7 @@ export const IconContainer = styled.div`
   justify-content: center;
   height: 24px;
   width: 24px;
-  background: ${themeStyles.colors.gradient};
+  background: ${themeStyles.colors.primary};
   border-radius: 50%;
 
   &:before {

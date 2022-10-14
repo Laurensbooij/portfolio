@@ -12,7 +12,7 @@ export const Anchor = styled.a`
   padding: 0.75rem 1.25rem;
   border-radius: 8px;
   color: ${themeStyles.colors.white};
-  background: ${themeStyles.colors.gradient};
+  background: ${themeStyles.colors.primary};
   cursor: pointer;
 
   @media (min-width: ${themeStyles.breakpoints.desktop}) {

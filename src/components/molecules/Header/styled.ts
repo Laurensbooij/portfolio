@@ -13,7 +13,7 @@ export const Container = styled.div`
     top: 0;
     left: 0;
     width: 100vw;
-    background: ${themeStyles.colors.gradient};
+    background: ${themeStyles.colors.primary};
     padding: 40px 20px 20px;
 
     @media (min-width: ${themeStyles.breakpoints.tablet}) {
