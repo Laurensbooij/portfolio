@@ -2,6 +2,8 @@ import styled from "styled-components"
 
 import themeStyles from "utilities/themeStyles"
 
+import { BodyTextSmall } from 'components/atoms/TextElements'
+
 interface containerProps {
   offsetTop: number,
 }
@@ -25,6 +27,26 @@ export const Container = styled.nav<containerProps>`
     padding: 0;
     background: none;
     translate: -4px 0;
+  }
+`
+
+export const Label = styled(BodyTextSmall)`
+  display: none;
+
+  @media (min-width: ${themeStyles.breakpoints.desktop}) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    color: ${themeStyles.colors.grey1};
+    padding: 0 24px 0 28px;
+
+    &:before, &:after {
+      content: "";
+      width: -webkit-fill-available;
+      height: 2px;
+      background: ${themeStyles.colors.grey3};
+    }
   }
 `
 

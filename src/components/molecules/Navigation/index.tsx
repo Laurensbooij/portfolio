@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import Toggle from './Toggle'
 import NavigationButton from './NavigationButton'
 
-import { Container, ButtonContainer } from './styled'
+import { Container, Label, ButtonContainer } from './styled'
 
 import compassIcon from "media/icons/icon-compass.png"
 import timelineIcon from "media/icons/icon-timeline.png"
@@ -22,6 +22,7 @@ const Navigation: FC<navigationProps> = ({ forwardRef, offsetTop }) => {
   return (
     <Container ref={forwardRef} offsetTop={offsetTop}>
       <Toggle offsetTop={offsetTop} />
+      <Label>Menu</Label>
       <ButtonContainer>
         <NavigationButton 
           url="/about-me"
