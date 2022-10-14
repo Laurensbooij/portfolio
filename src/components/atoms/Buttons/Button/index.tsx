@@ -10,7 +10,7 @@ interface buttonProps {
 }
 
 const Button: FC<buttonProps> = ({ href, children }) => (
-  <Link href={href}>
+  <Link href={href} passHref>
     <Anchor>{children}</Anchor>
   </Link>
 )
