@@ -8,8 +8,6 @@ import GridContainer from 'components/atoms/GridContainer'
 import PortfolioCasePreview from './PortfolioCasePreview'
 import CaseOverview from './CaseOverview'
 
-const mockData = [{ name: 'test', slug: 'test'}, { name: 'test', slug: 'test'}, { name: 'Reppinbars', slug: 'reppinbars'}, { name: 'test', slug: 'test'}, { name: 'test', slug: 'test'}, { name: 'test', slug: 'test'}]
-
 interface portfolioSectionProps {
   portfolioCasesData: Entry<portfolioCaseDataProps>[],
 }
@@ -24,7 +22,8 @@ const PortfolioSection: FC<portfolioSectionProps> = ({ portfolioCasesData }) => 
     displayedCaseData ? window.document.body.classList.add('noscroll') : window.document.body.classList.remove('noscroll')
   })
 
-  const PortfolioCasePreviews = mockData.map((caseData, index) => {
+  const sortedPortfolioCasesData = portfolioCasesData.sort((a, b) => a.fields.order > b.fields.order ? 1 : -1)
+  const PortfolioCasePreviews = sortedPortfolioCasesData.map((caseData, index) => {
     let fullWidth = false
     if (((index) % 3) === 0 || index === 0) {
       fullWidth = true
@@ -32,8 +31,8 @@ const PortfolioSection: FC<portfolioSectionProps> = ({ portfolioCasesData }) => 
   
     return (
       <PortfolioCasePreview 
-        key={portfolioCasesData[0].sys.id}
-        data={portfolioCasesData[0].fields}
+        key={caseData.sys.id}
+        data={caseData.fields}
         fullWidth={fullWidth}
       />
     )
