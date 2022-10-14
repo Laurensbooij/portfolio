@@ -40,12 +40,12 @@ const AboutMeSection: FC<aboutMeSectionProps> = ({ aboutMeData }) => {
         <AboutMeContentCard
           iconUrl={personalValuesIcon.fields.file.url}
           title={personalValuesTitle}
-          text={personalValuesContent.content[0].content[0].value}
+          textContent={personalValuesContent.content}
         />
         <AboutMeContentCard
           iconUrl={ambitionsIcon.fields.file.url}
           title={ambitionsTitle}
-          text={ambitionsContent.content[0].content[0].value}
+          textContent={ambitionsContent.content}
         />
       </GridContainer>
     </section>
