@@ -33,7 +33,7 @@ export const Container = styled.div<containerProps>`
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
     flex-direction: row;
     justify-content: space-between;
-    padding: 16px 24px;
+    padding: 16px 24px 16px 44px;
     border-radius: 0 8px 8px 0;
     border: 4px solid ${props => props.active ? themeStyles.colors.primary : themeStyles.colors.white};
 
@@ -75,6 +75,6 @@ export const Text = styled(H4)<textProps>`
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
     font-size: 1rem;
     font-weight: 600;
-    margin: 0 0 0 1.5rem;
+    margin: 0;
   }
 `
