@@ -43,7 +43,7 @@ export const StyledSearchBox = styled(SearchBox)<styledSearchBoxProps>`
   }
 
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
-    left: ${props => ((props.clientWidth - 500) / 2) + 420}px;
+    left: ${props => ((props.clientWidth - 400) / 2) + 320}px;
     translate: -50% 0;
     margin: 0;
   }
