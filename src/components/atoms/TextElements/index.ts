@@ -12,7 +12,7 @@ export const H1 = styled.h1`
 
   @media (min-width: ${themeStyles.breakpoints.tablet}) {
     font-size: 3rem;
-    margin: 2.5rem 0 0.5rem;
+    margin: 3rem 0 0.5rem;
   }
 `
 
@@ -26,7 +26,7 @@ export const H2 = styled.h2`
 
   @media (min-width: ${themeStyles.breakpoints.tablet}) {
     font-size: 2rem;
-    margin: 2rem 0 0.5rem;
+    margin: 2.5rem 0 0.5rem;
   }
 `
 
@@ -40,7 +40,7 @@ export const H3 = styled.h3`
 
   @media (min-width: ${themeStyles.breakpoints.tablet}) {
     font-size: 1.5rem;
-    margin: 1.75rem 0 0.5rem;
+    margin: 2.25rem 0 0.5rem;
   }
 `
 
@@ -54,7 +54,7 @@ export const H4 = styled.h4`
 
   @media (min-width: ${themeStyles.breakpoints.tablet}) {
     font-size: 1.25rem;
-    margin: 1.625rem 0 0.5rem;
+    margin: 2.125rem 0 0.5rem;
   }
 `
 
@@ -68,7 +68,7 @@ export const H5 = styled.h5`
 
   @media (min-width: ${themeStyles.breakpoints.tablet}) {
     font-size: 1rem;
-    margin: 1.5rem 0 0.5rem;
+    margin: 2rem 0 0.5rem;
   }
 `
 
@@ -77,7 +77,7 @@ export const H6 = styled.h6`
   font-weight: 500;
   font-size: 1rem;
   line-height: 160%;
-  margin: 1.5rem 0 0.5rem;
+  margin: 1.75rem 0 0.5rem;
   color: ${themeStyles.colors.primaryText};
 `
 
@@ -85,8 +85,8 @@ export const BodyText = styled.p`
   font-family: 'Montserrat', Roboto, Helvetica Neue, sans-serif;
   font-weight: 400;
   font-size: 1rem;
-  line-height: 160%;
-  margin: 0.5rem 0;
+  line-height: 180%;
+  margin: 1rem 0;
   color: ${themeStyles.colors.primaryText};
 `
 
@@ -95,7 +95,7 @@ export const BodyTextSmall = styled.p`
   font-weight: 500;
   font-size: 0.875rem;
   line-height: 160%;
-  margin: 0.5rem 0;
+  margin: 1rem 0;
   color: ${themeStyles.colors.primaryText};
 `
 
@@ -124,10 +124,11 @@ export const UnorderedList = styled.ul`
   flex-direction: column;
   gap: 12px;
   margin: 1.25rem 0;
-  padding-left: 20px;
+  padding-left: 32px;
   list-style: none;
 
   li {
+    line-height: 160%;
     display: flex;
     align-items: center;
     gap: 5px;
@@ -143,6 +144,7 @@ export const UnorderedList = styled.ul`
     display: inline-block;
     position: absolute;
     left: -20px;
+    top: 0.5rem;
     height: 8px;
     width: 8px;
     border-radius: 50%;
