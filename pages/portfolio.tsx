@@ -11,6 +11,7 @@ import Layout from 'components/layouts/standardLayout'
 import Head from 'next/head'
 
 import PortfolioSection from 'components/organisms/PortolioSection'
+import CtaSection from 'components/molecules/CtaSection'
 
 export async function getStaticProps() {
   const PortfolioCasesRes = await client.getEntries({ content_type: "portfolioCase" })
@@ -34,6 +35,11 @@ const Portfolio: NextPageWithLayout<portfolioProps> = ({ portfolioCasesData }) =
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <PortfolioSection portfolioCasesData={portfolioCasesData} />
+    <CtaSection 
+      title="I’m available for work. Want to know more?"
+      buttonText="Contact me"
+      href="mailto:business@laurensbooij.com"
+    />
   </>
 )
 

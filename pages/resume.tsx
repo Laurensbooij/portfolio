@@ -14,8 +14,8 @@ import { useNavToggleContext } from 'contexts/NavToggleContext'
 
 import Head from 'next/head'
 
-import CtaSection from 'components/molecules/CtaSection'
 import ResumeSection from 'components/organisms/ResumeSection'
+import CtaSection from 'components/molecules/CtaSection'
 
 export async function getStaticProps() {
   const workExperienceRes = await client.getEntries({ content_type: "workExperience" })
