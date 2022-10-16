@@ -32,7 +32,7 @@ export const ContentContainer = styled.section<contentContainerProps>`
   height: ${props => `calc(100vh - ${props.headerHeight}px)`};
   top: ${props => props.headerHeight}px;
   left: 0;
-  max-width: 1600px;
+  max-width: 1400px;
   background: ${themeStyles.colors.white};
   overflow-y: scroll;
 
@@ -45,8 +45,8 @@ export const ContentContainer = styled.section<contentContainerProps>`
     border-radius: 16px;
   }
 
-  @media (min-width: 1720px) {
-    left: calc((100vw - 1600px) / 2);
+  @media (min-width: 1520px) {
+    left: calc((100vw - 1400px) / 2);
   }
 `
 export const ScrollContainer = styled.div`

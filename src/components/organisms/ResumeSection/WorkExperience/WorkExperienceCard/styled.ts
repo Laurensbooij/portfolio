@@ -28,7 +28,7 @@ export const FlexContainer = styled.div`
   gap: 20px;
 
   @media (min-width:${themeStyles.breakpoints.desktop}) {
-    gap: 32px;
+    gap: 24px;
   }
 `
 
@@ -39,6 +39,7 @@ interface logoProps {
 export const Logo = styled.div<logoProps>`
   height: 60px;
   width: 60px;
+  border: 2px solid ${themeStyles.colors.grey4};
   border-radius: 8px;
   background: url(${props => props.src});
   background-repeat: no-repeat;

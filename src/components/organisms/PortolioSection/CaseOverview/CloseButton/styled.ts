@@ -44,7 +44,7 @@ export const IconContainer = styled.div`
     translate: 0;
   }
 
-  @media (min-width: 1720px) {
-    right: calc(((100vw - 1600px) / 2) + 80px);
+  @media (min-width: 1520px) {
+    right: calc(((100vw - 1400px) / 2) + 80px);
   }
 `
