@@ -13,8 +13,6 @@ interface richTextProps {
 
 const RichText: FC<richTextProps> = ({ content }) => {
 
-  console.log(content)
-
   const extractText = (content: any) => {  
     
     let stringsArray = content.map((item: any) => {
