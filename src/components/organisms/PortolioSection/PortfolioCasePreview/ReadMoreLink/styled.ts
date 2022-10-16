@@ -4,7 +4,7 @@ import themeStyles from 'utilities/themeStyles'
 
 import { BodyTextSmall } from 'components/atoms/TextElements'
 
-import chevronIcon from 'media/icons/Icon-chevron-primarytext.png'
+import chevronIcon from 'media/icons/icon-chevron-primarytext.png'
 
 const hoverAnimation = keyframes`
   0% {

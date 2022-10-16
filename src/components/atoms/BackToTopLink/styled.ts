@@ -4,7 +4,7 @@ import themeStyles from 'utilities/themeStyles'
 
 import { BodyTextSmall } from 'components/atoms/TextElements'
 
-import chevronIcon from 'media/icons/Icon-chevron-grey1.png'
+import chevronIcon from 'media/icons/icon-chevron-grey1.png'
 
 export const Container = styled.div`
   display: flex;
