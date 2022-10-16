@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 
 import CardContainer from 'components/atoms/CardContainer'
 
-import { TitleContainer, IconContainer, Icon, Title, Text } from './styled'
+import { TitleContainer, IconContainer, Icon, Title } from './styled'
 import RichText from 'components/atoms/RichText'
 
 interface aboutMeContentProps {
