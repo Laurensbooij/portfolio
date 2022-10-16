@@ -86,8 +86,18 @@ export const BodyText = styled.p`
   font-weight: 400;
   font-size: 1rem;
   line-height: 180%;
-  margin: 1rem 0;
+  margin: 0;
   color: ${themeStyles.colors.primaryText};
+
+  & + p {
+    margin: 1.2rem 0 0;
+  }
+
+  a {
+    color: ${themeStyles.colors.primary};
+    border-bottom: 1px solid ${themeStyles.colors.primary};
+  }
+
 `
 
 export const BodyTextSmall = styled.p`
@@ -95,7 +105,7 @@ export const BodyTextSmall = styled.p`
   font-weight: 500;
   font-size: 0.875rem;
   line-height: 160%;
-  margin: 1rem 0;
+  margin: 0;
   color: ${themeStyles.colors.primaryText};
 `
 

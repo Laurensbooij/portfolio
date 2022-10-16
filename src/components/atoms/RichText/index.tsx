@@ -13,9 +13,14 @@ interface richTextProps {
 
 const RichText: FC<richTextProps> = ({ content }) => {
 
+  console.log(content)
+
   const extractText = (content: any) => {  
     
     let stringsArray = content.map((item: any) => {
+      if(item.nodeType === 'hyperlink') {
+        return `<a href=${item.data.uri} target="_blank">${item.content[0].value}</a>`
+      }
       if(item.marks.find((mark: any) => mark.type === 'bold')) {
         return `<b>${item.value}</b>`
       }
