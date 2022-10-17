@@ -14,10 +14,10 @@ export const Container = styled.div`
     left: 0;
     width: 100vw;
     background: ${themeStyles.colors.primary};
-    padding: 40px 20px 20px;
+    padding: 20px 20px;
 
     @media (min-width: ${themeStyles.breakpoints.tablet}) {
-        padding: 40px 80px;
+        padding: 32px 80px;
     }
 `
 
