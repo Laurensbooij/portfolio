@@ -18,13 +18,8 @@ const BookListSection: FC<bookListSectionProps> = ({ bookListData }) => {
 
   const { positioningDimensions } = usePositioningDimensionsContext()
 
-  const [sortedBookListData, setSortedBookListData] = useState(bookListData)
-
-  useEffect(() => {
-    const sortedBookListData = bookListData.sort((a, b) => a.fields.title.localeCompare(b.fields.title));
-    setSortedBookListData(sortedBookListData)
-  }, [bookListData])
-
+  const sortedBookListData = bookListData.sort((a, b) => a.fields.title.localeCompare(b.fields.title));
+  
   const [filteredBookListData, setFilteredBookListData] = useState(sortedBookListData)
   const [searchInput, setSearchInput] = useState('')
 
