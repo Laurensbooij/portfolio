@@ -4,18 +4,6 @@ import themeStyles from 'utilities/themeStyles'
 
 import searchIcon from 'media/icons/icon-search.png' 
 
-const focusAnimation = keyframes`
-  0% {
-    background-position: 0% 0%; 
-  }
-  50% {
-    background-position: 100% 50%; 
-  }
-  100% {
-    background-position: 0% 0%;
-  }
-`
-
 export const Container = styled.div`
   position: relative;
   width: 100%;
@@ -37,6 +25,7 @@ export const Input = styled.input<inputProps>`
   height: 100%;
   width: 100%;
   padding: 0 16px;
+  background: ${themeStyles.colors.white};
   border-radius: 50px;
   border: 2px solid ${themeStyles.colors.grey3};
   outline: none;
@@ -46,23 +35,12 @@ export const Input = styled.input<inputProps>`
   }
 
   ${props => props.value.length > 0 && css`
-    border-color: transparent;
-    background: 
-    linear-gradient(${themeStyles.colors.white}, ${themeStyles.colors.white}) padding-box,
-    ${themeStyles.colors.gradientWithCustomAngle(90)} border-box;
-    background-size: 200% 200%;
-    animation: ${focusAnimation} 2s ease infinite;
+    border-color: ${themeStyles.colors.primary};
   `}
 
-
   &:focus {
-      border-color: transparent;
-      background: 
-      linear-gradient(${themeStyles.colors.white}, ${themeStyles.colors.white}) padding-box,
-      ${themeStyles.colors.gradientWithCustomAngle(90)} border-box;
-      background-size: 200% 200%;
-      animation: ${focusAnimation} 2s ease infinite;
-    }
+    border-color: ${themeStyles.colors.primary};
+  }
 `
 
 export const SearchButton = styled.div`
