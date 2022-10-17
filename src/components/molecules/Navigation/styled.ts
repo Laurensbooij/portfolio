@@ -17,7 +17,7 @@ export const Container = styled.nav<containerProps>`
   bottom: 0;
   left: 0;
   width: 100vw;
-  padding: 20px 12px 32px;
+  padding: 20px 12px 12px;
   background: linear-gradient(180deg, rgba(250,250,250,0) 0%, rgba(250,250,250,1) 45%);
 
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
