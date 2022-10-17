@@ -19,7 +19,7 @@ const BookListSection: FC<bookListSectionProps> = ({ bookListData }) => {
   const { positioningDimensions } = usePositioningDimensionsContext()
 
   const sortedBookListData = bookListData.sort((a, b) => a.fields.title.localeCompare(b.fields.title));
-  
+
   const [filteredBookListData, setFilteredBookListData] = useState(sortedBookListData)
   const [searchInput, setSearchInput] = useState('')
 
@@ -61,7 +61,6 @@ const BookListSection: FC<bookListSectionProps> = ({ bookListData }) => {
       {filteredBookListData.length > 0 ?
       <BookList bookListData={filteredBookListData}/> :
       <EmptySearchNotification>{EmptySearchMessage}</EmptySearchNotification>}
-      <BookSuggestionForm />
     </Container>
   )
 }
