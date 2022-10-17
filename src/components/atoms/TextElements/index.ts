@@ -143,6 +143,7 @@ export const UnorderedList = styled.ul`
     align-items: center;
     gap: 5px;
     position: relative;
+    color: ${themeStyles.colors.primaryText};
   }
 
   li b {
