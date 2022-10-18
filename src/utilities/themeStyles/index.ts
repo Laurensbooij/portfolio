@@ -24,6 +24,7 @@ const themeStyles: DefaultTheme = {
   breakpoints: {
     tablet: '768px',
     desktop: '1280px',
+    desktopXL: '1640px',
   },
 };
 

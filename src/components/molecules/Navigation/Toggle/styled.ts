@@ -18,6 +18,7 @@ export const Container = styled.div<containerProps>`
   height: 40px;
   width: calc(100vw - 24px);
   max-width: 500px;
+  margin: 0 0 16px 0;
   background: ${themeStyles.colors.white};
   border: 2px solid ${themeStyles.colors.grey3};
   border-radius: 50px;
@@ -28,12 +29,17 @@ export const Container = styled.div<containerProps>`
 
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
     position: fixed;
-    left: ${props => ((props.clientWidth - 500) / 2) + 420}px;
+    left: calc(((100vw - 500px) / 2) + 420px);
     top: -50px;
     height: 48px;
+    margin: 0;
     translate: -50% 0;
     display: ${props => props.showToggle ? 'flex' : 'none'};
     transition: none;
+  }
+
+  @media (min-width: ${themeStyles.breakpoints.desktopXL}) {
+    left: 850px;
   }
 `
 

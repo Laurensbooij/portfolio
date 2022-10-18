@@ -13,20 +13,25 @@ export const Container = styled.nav<containerProps>`
   display: flex;
   flex-direction: column;
   position: fixed;
-  gap: 16px;
   bottom: 0;
   left: 0;
   width: 100vw;
   padding: 20px 12px 12px;
   background: linear-gradient(180deg, rgba(250,250,250,0) 0%, rgba(250,250,250,1) 45%);
-
+  
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
+    gap: 16px;
     top: calc(80px + ${props => props.offsetTop}px);
     left: 0;
     width: 244px;
     padding: 0;
     background: none;
     translate: -4px 0;
+  }
+
+  @media (min-width: ${themeStyles.breakpoints.desktopXL}) {
+    left: calc((100vw - 1400px) / 2);
+    translate: 0 0;
   }
 `
 

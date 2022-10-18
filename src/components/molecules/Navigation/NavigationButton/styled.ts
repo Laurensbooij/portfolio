@@ -41,6 +41,10 @@ export const Container = styled.div<containerProps>`
       border-color: ${themeStyles.colors.primary};
   }
   }
+
+  @media (min-width: ${themeStyles.breakpoints.desktopXL}) {
+    border-radius: 8px;
+  }
 `
 
 export const Icon = styled.div<iconProps>`

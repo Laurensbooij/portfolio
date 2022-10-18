@@ -10,6 +10,7 @@ interface containerProps {
 export const Container = styled.div<containerProps>`
   display: flex;
   width: 100vw;
+  max-width: 1400px;
   height: 100%;
   margin: ${props => props.headerHeight}px 0 ${props => props.navigationHeight}px;
   padding: 40px 12px 60px;
@@ -19,6 +20,11 @@ export const Container = styled.div<containerProps>`
     margin-left: 240px;
     margin-bottom: 0;
     padding: 80px 80px 120px;
+  }
+
+  @media (min-width: ${themeStyles.breakpoints.desktopXL}) {
+    margin: ${props => props.headerHeight}px auto 0;
+    padding: 80px 0 120px;
   }
 `
 
@@ -31,5 +37,9 @@ export const Main = styled.main`
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
     gap: 80px;
     height: 100%;
+  }
+
+  @media (min-width: ${themeStyles.breakpoints.desktopXL}) {
+    padding: 0 0 0 300px;
   }
 `
