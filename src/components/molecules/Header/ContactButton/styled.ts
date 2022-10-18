@@ -46,6 +46,10 @@ export const Container = styled.div<containerProps>`
     padding: 0 10px 0 24px;
     border: none;
     border-radius: 50px;
+
+    &:hover div {
+      background: ${themeStyles.colors.primary};
+    }
   }
 `
 
@@ -64,6 +68,7 @@ export const Icon = styled.div`
   width: 24px;
   background: ${themeStyles.colors.primary};
   border-radius: 50px;
+  transition: all 300ms ease;
 
   &:before {
     content: "";
