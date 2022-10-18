@@ -36,6 +36,7 @@ export const Container = styled.div<containerProps>`
   background: ${themeStyles.colors.grey4};
   border: 2px solid ${themeStyles.colors.primary};
   border-radius: 50px 0 0 50px;
+  box-shadow: ${themeStyles.shadows.dropShadow};
   cursor: pointer;
   animation: ${props => collapseAnimation(props.containerWidth)} 6400ms ease 1 normal;
 
