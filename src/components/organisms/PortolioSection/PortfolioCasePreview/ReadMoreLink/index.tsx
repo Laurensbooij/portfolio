@@ -9,7 +9,7 @@ interface readMoreLinkProps {
 }
 
 const ReadMoreLink: FC<readMoreLinkProps> = ({ href }) => (
-  <Link href={href}>
+  <Link href={href} passHref>
     <LinkBody>Read more</LinkBody>
   </Link>
 )

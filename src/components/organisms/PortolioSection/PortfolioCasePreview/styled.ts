@@ -18,6 +18,7 @@ export const Container = styled.div<containerProps>`
   border-radius: 12px;
   box-sizing: border-box;
   overflow: hidden;
+  cursor: pointer;
 
   
   @media (min-width: ${themeStyles.breakpoints.tablet}) {

@@ -3,6 +3,8 @@ import { useRouter } from 'next/router'
 
 import { portfolioCaseDataProps } from 'utilities/contentfulTypes/contentfulTypes'
 
+import Link from 'next/link'
+
 import CaseCategories from '../CaseCategories'
 import ReadMoreLink from './ReadMoreLink'
 
@@ -49,6 +51,7 @@ const PortfolioCasePreview: FC<portfolioCasePreviewProps> = ({ data, fullWidth }
   const [mainContentHeight, setMainContentHeight] = useState(mainContentContainerRef.current?.clientHeight || 100)
 
   return (
+    <Link href={`${asPath}/?case=${detailPageSlug}`} passHref>
     <Container fullWidth={fullWidth} >
       <CoverImage imageSrc={casePreviewImage.fields.file.url} />
       <MetadataContainer ref={metaDataContainerRef} mainContentHeight={mainContentHeight} >
@@ -61,6 +64,7 @@ const PortfolioCasePreview: FC<portfolioCasePreviewProps> = ({ data, fullWidth }
         <ReadMoreLink href={`${asPath}/?case=${detailPageSlug}`} />
       </MetadataContainer>
     </Container>
+    </Link>
   )
 }
 
