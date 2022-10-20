@@ -5,9 +5,9 @@ import Link from 'next/link'
 import { Container, FlexContainer, InfoText } from './styled'
 
 import ageIcon from "media/icons/icon-age.png"
-import countryIcon from "media/icons/icon-netherlands.png"
-import linkedinIcon from "media/icons/icon-linkedin.png"
-import githubIcon from "media/icons/icon-github.png"
+import countryIcon from "media/icons/icon-Netherlands.png"
+import linkedinIcon from "media/icons/icon-Linkedin.png"
+import githubIcon from "media/icons/icon-GitHub.png"
 
 const PersonalInfo = ({  }) => (
   <Container>
