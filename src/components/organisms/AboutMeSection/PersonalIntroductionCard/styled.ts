@@ -6,11 +6,23 @@ import CardContainer from 'components/atoms/CardContainer'
 import  { H3, H5, BodyText } from "components/atoms/TextElements"
 
 export const StyledCardContainer = styled(CardContainer)`
+  flex-direction: column;
+  gap: 32px;
+  
+  @media (min-width: ${themeStyles.breakpoints.desktop}) {
+    gap: 60px;
+  }  
+`
+
+export const FlexContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
     flex-direction: row;
     gap: 80px;
-  }
+  } 
 `
 
 export const Image = styled.img`

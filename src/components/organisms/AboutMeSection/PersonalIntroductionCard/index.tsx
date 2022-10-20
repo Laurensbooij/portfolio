@@ -1,6 +1,8 @@
 import React, { FC } from 'react'
 
-import { StyledCardContainer, Image, TextContainer, Title, Subtitle, Text } from './styled'
+import PersonalInfo from './PersonalInfo'
+
+import { StyledCardContainer, FlexContainer, Image, TextContainer, Title, Subtitle, Text } from './styled'
 
 interface personalIntroductionProps {
   title: string,
@@ -11,12 +13,15 @@ interface personalIntroductionProps {
 
 const PersonalIntroduction: FC<personalIntroductionProps> = ({ title, subtitle, text, imageSrc }) => (
   <StyledCardContainer fullWidth>
-    <Image alt="Profile picture" src={imageSrc} />
-    <TextContainer>
-      <Title>{title}</Title>
-      <Subtitle>{subtitle}</Subtitle>
-      <Text>{text}</Text>
-    </TextContainer>
+    <FlexContainer>
+      <Image alt="Profile picture" src={imageSrc} />
+      <TextContainer>
+        <Title>{title}</Title>
+        <Subtitle>{subtitle}</Subtitle>
+        <Text>{text}</Text>
+      </TextContainer>
+    </FlexContainer>
+    <PersonalInfo />
   </StyledCardContainer>
 )
 

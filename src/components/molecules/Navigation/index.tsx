@@ -6,10 +6,10 @@ import NavigationButton from './NavigationButton'
 
 import { Container, Label, ButtonContainer } from './styled'
 
-import compassIcon from "media/icons/icon-compass.png"
-import timelineIcon from "media/icons/icon-timeline.png"
-import portfolioIcon from "media/icons/icon-portfolio.png"
-import bookIcon from "media/icons/icon-book.png"
+import compassIcon from 'media/icons/icon-compass.png'
+import timelineIcon from 'media/icons/icon-timeline.png'
+import portfolioIcon from 'media/icons/icon-portfolio.png'
+import bookIcon from 'media/icons/icon-book.png'
 
 interface navigationProps {
   forwardRef?: any,
