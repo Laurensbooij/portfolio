@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { useRouter } from 'next/router'
 
 import type { NextPageWithLayout } from './_app'
 import type { ReactElement } from 'react'
@@ -35,7 +36,10 @@ interface resumeProps {
 }
 
 const Resume: NextPageWithLayout<resumeProps> = ({ workExperienceData, educationExperienceData }) => {
-  const { setToggleVisibility, setToggleContent } = useNavToggleContext()
+  const { navToggleState, setToggleVisibility, setToggleContent } = useNavToggleContext()
+
+  const router = useRouter()
+  const toggledParam  = router.query.toggled
 
   const toggleLabelLeft = 'Work'
   const toggleLabelRight = 'Education'
@@ -50,6 +54,12 @@ const Resume: NextPageWithLayout<resumeProps> = ({ workExperienceData, education
         rightToggleParam: 'education',
       },
     })
+
+    if (!toggledParam) {
+      router.push({
+        query: { toggled: navToggleState.toggled }
+      })
+    }
 
     return () => {
       setToggleVisibility('HIDE')
