@@ -38,14 +38,14 @@ const AboutMeSection: FC<aboutMeSectionProps> = ({ aboutMeData }) => {
           imageSrc={personalPhoto.fields.file.url}
         />
         <AboutMeContentCard
-          iconUrl={personalValuesIcon.fields.file.url}
-          title={personalValuesTitle}
-          textContent={personalValuesContent.content}
-        />
-        <AboutMeContentCard
           iconUrl={ambitionsIcon.fields.file.url}
           title={ambitionsTitle}
           textContent={ambitionsContent.content}
+        />
+        <AboutMeContentCard
+          iconUrl={personalValuesIcon.fields.file.url}
+          title={personalValuesTitle}
+          textContent={personalValuesContent.content}
         />
       </GridContainer>
     </section>
