@@ -16,8 +16,8 @@ const ContactButton = () => {
   return (
     <Link href="mailto: business@laurensbooij.com" passHref>
       <Container ref={containerRef} containerWidth={containerWidth}>
-        <Icon/>
         <Text>Contact me</Text>
+        <Icon/>
       </Container>
     </Link>
   )

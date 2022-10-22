@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 
 import ContactButton from './ContactButton'
 
-import { Container, TitleContainer, Title, Subtitle } from './styled'
+import { Container, FlexContainer, TitleContainer, Title, Subtitle } from './styled'
 
 interface HeaderProps {
     forwardRef?: any,
@@ -12,11 +12,13 @@ interface HeaderProps {
 
 const Header: FC<HeaderProps> = ({ forwardRef, title, subtitle }) => (
     <Container ref={forwardRef}>
-        <TitleContainer>
-            <Title>{title}</Title>
-            <Subtitle>{subtitle}</Subtitle>
-        </TitleContainer>
-        <ContactButton />
+        <FlexContainer>
+            <TitleContainer>
+                <Title>{title}</Title>
+                <Subtitle>{subtitle}</Subtitle>
+            </TitleContainer>
+            <ContactButton />
+        </FlexContainer>
     </Container>
 )
 
