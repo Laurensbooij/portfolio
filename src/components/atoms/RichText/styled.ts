@@ -13,7 +13,7 @@ export const Container = styled.div`
     }
 
     b {
-      color: ${themeStyles.colors.secondary};
+      color: ${themeStyles.colors.primaryText};
     }
   }
 `

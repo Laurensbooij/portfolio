@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 
 import themeStyles from "utilities/themeStyles"
 
@@ -81,6 +81,26 @@ export const H6 = styled.h6`
   color: ${themeStyles.colors.primaryText};
 `
 
+const hoverAnimation = keyframes`
+  0% {
+    width: calc(100% + 1px);
+  }
+  50% {
+    width: 0%;
+    right: 0px;
+    left: inherit;
+  }
+  50.1% {
+    left: 0px;
+    right: inherit;
+  }
+  100% {
+    width: calc(100% + 1px);
+    left: 0px;
+    right: inherit;
+  }
+`
+
 export const BodyText = styled.p`
   font-family: 'Montserrat', Roboto, Helvetica Neue, sans-serif;
   font-weight: 400;
@@ -94,8 +114,31 @@ export const BodyText = styled.p`
   }
 
   a {
-    color: ${themeStyles.colors.primary};
-    border-bottom: 1px solid ${themeStyles.colors.primary};
+    position: relative;
+    width: fit-content;
+    font-weight: 500;
+    padding: 0 4px 0;
+    cursor: pointer;
+  }
+
+  a:before {
+    content: "";
+    position: absolute;
+    right: 0px;
+    bottom: -2px;
+    width: calc(100% - 2px);
+    height: 2px;
+    background: ${themeStyles.colors.gradient};
+    border-radius: 20px;
+    transition: all 300ms ease;
+  }
+
+  a:hover {
+    color: ${themeStyles.colors.grey1};
+  }
+  
+  a:hover:before {
+    animation: 600ms ease ${hoverAnimation};
   }
 
 `
