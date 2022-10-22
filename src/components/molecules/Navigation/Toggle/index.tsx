@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react'
+import React, { FC } from 'react'
 
 import { useNavToggleContext } from 'contexts/NavToggleContext'
 import { usePositioningDimensionsContext } from 'contexts/PositioningDimensionsContext'
@@ -14,7 +14,7 @@ const Toggle: FC<toggleProps> = ({ offsetTop }) => {
   const { showToggle, toggled, toggleLabels } = navToggleState
 
   const { positioningDimensions } = usePositioningDimensionsContext()
-  const { clientWidth } = positioningDimensions 
+  const { clientWidth } = positioningDimensions
 
   return (
     <Container clientWidth={clientWidth} offsetTop={offsetTop} showToggle={showToggle}>

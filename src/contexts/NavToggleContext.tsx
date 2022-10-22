@@ -1,4 +1,5 @@
-import React, { createContext, FC, useContext, useState } from 'react'
+import React, { createContext, FC, useContext, useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
 
 const NavToggleContext = createContext<any>(null)
 export const useNavToggleContext = () => useContext(NavToggleContext)
@@ -17,7 +18,7 @@ export interface navToggleContextProps {
 }
 
 const NavToggleContextProvider: FC<navToggleContextProviderProps> = ({ children }) => {
-
+  
   const [ navToggleState, setNavToggleState] = useState<navToggleContextProps>({
     showToggle: false,
     toggled: false,
@@ -26,6 +27,20 @@ const NavToggleContextProvider: FC<navToggleContextProviderProps> = ({ children 
       right: 'Right',
     },
   })
+
+  const router = useRouter()
+  const toggleParam = router.query.toggled
+
+  const checkToggleParams = () => {
+    if (toggleParam === undefined) return
+
+    if (toggleParam === 'false' && navToggleState.toggled) {
+      setNavToggleState(prevState => ({...prevState, toggled: false }))
+    }
+    if (toggleParam === 'true' && !navToggleState.toggled) {
+      setNavToggleState(prevState => ({...prevState, toggled: true }))
+    }
+  }
 
   const setToggleVisibility = (action: string) => {
     switch(action) {
@@ -47,6 +62,12 @@ const NavToggleContextProvider: FC<navToggleContextProviderProps> = ({ children 
       }
       return prevState
     })
+
+    if (toggleParam) {
+      router.push({
+        query: { toggled: toggleValue }
+      })
+    }
   }
 
   const setToggleContent = ( action: string, payload: { leftLabel: string, rightLabel: string } ) => {
@@ -73,6 +94,10 @@ const NavToggleContextProvider: FC<navToggleContextProviderProps> = ({ children 
       return null
     }
   }
+  
+  useEffect(() => {
+    checkToggleParams()
+  }, [toggleParam])
 
   return (
     <NavToggleContext.Provider value={{ navToggleState, switchToggle, setToggleContent, setToggleVisibility }}>
