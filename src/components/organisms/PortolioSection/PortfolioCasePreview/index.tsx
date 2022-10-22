@@ -38,6 +38,7 @@ const PortfolioCasePreview: FC<portfolioCasePreviewProps> = ({ data, fullWidth }
 
   useEffect(() => {
     window.addEventListener('resize', windowResizeHandler)
+    setMainContentHeight(mainContentContainerRef.current?.clientHeight || 100)
 
     return () => window.removeEventListener('resize', windowResizeHandler)
   }, [])
