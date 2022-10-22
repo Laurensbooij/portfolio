@@ -42,29 +42,37 @@ const Resume: NextPageWithLayout<resumeProps> = ({ workExperienceData, education
 
   useEffect(() => {
     setToggleVisibility('SHOW')
-    setToggleContent('SET', { leftLabel: toggleLabelLeft, rightLabel: toggleLabelRight })
+    setToggleContent('SET', { 
+      leftLabel: toggleLabelLeft,
+      rightLabel: toggleLabelRight,
+      paramSettings: {
+        leftToggleParam: 'work',
+        rightToggleParam: 'education',
+      },
+    })
+
     return () => {
       setToggleVisibility('HIDE')
     }
   },[])
 
   return (
-  <>
-    <Head>
-      <title>Laurens Booij</title>
-      <meta name="description" content="About me page about Laurens Booij" />
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
-    <ResumeSection 
-      workExperienceData={workExperienceData}
-      educationExperienceData={educationExperienceData}
-    />
-    <CtaSection 
-      title="Curious about my work?"
-      buttonText="Take a look at my portolio"
-      href="/portfolio"
-    />
-  </>
+    <>
+      <Head>
+        <title>Laurens Booij</title>
+        <meta name="description" content="About me page about Laurens Booij" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <ResumeSection 
+        workExperienceData={workExperienceData}
+        educationExperienceData={educationExperienceData}
+      />
+      <CtaSection 
+        title="Curious about my work?"
+        buttonText="Take a look at my portolio"
+        href="/portfolio"
+      />
+    </>
   )
 }
 
