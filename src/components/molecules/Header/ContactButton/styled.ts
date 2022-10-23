@@ -17,7 +17,7 @@ export const Container = styled.div<containerProps>`
   gap: 12px;
   height: 48px;
   width: 48px;
-  background: ${themeStyles.colors.grey4};
+  background: none;
   border-radius: 50px;
   box-shadow: ${themeStyles.shadows.dropShadow};
   cursor: pointer;
@@ -28,7 +28,7 @@ export const Container = styled.div<containerProps>`
     height: 52px;
     width: fit-content;
     padding: 0 10px 0 24px;
-    border: none;
+    background: ${themeStyles.colors.grey4};
 
     &:hover div {
       background: ${themeStyles.colors.primary};
@@ -50,9 +50,10 @@ export const Icon = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 44px;
-  width: 44px;
+  height: 100%;
+  width: 100%;
   background: ${themeStyles.colors.secondary};
+  border: 2px solid ${themeStyles.colors.grey4};
   border-radius: 50px;
   transition: all 300ms ease;
 
@@ -69,6 +70,7 @@ export const Icon = styled.div`
   @media (min-width: ${themeStyles.breakpoints.tablet}) {
     height: 32px;
     width: 32px;
+    border: none;
 
     &:before {
       height: 20px;
