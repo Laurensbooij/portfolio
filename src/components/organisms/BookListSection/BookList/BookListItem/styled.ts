@@ -66,7 +66,7 @@ export const CoverImage = styled.img`
 export const TitleContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 2px;
   grid-area: titlecontainer;
 `
 
@@ -74,7 +74,7 @@ export const Title = styled(H5)`
   margin: 0;
 `
 
-export const Authors = styled(BodyText)`
+export const Authors = styled(BodyTextSmall)`
   margin: 0;
   color: ${themeStyles.colors.grey1};
 `
