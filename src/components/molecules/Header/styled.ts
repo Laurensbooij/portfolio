@@ -33,6 +33,7 @@ export const TitleContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: calc(100vw - 114px);
 `
 
 export const Title = styled(H1)`
