@@ -55,7 +55,7 @@ export const Title = styled(H3)`
 export const Subtitle = styled(H5)`
   font-size: 0.875rem;
   color: ${themeStyles.colors.secondary};
-  margin: 0 0 1rem 0;
+  margin: 0 0 1rem 0 !important;
 
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
     font-size: 1rem;
