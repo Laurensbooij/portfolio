@@ -14,7 +14,7 @@ const ContactButton = () => {
   })
 
   return (
-    <Link href="mailto: business@laurensbooij.com" passHref>
+    <Link href="mailto: mail.laurensbooij@gmail.com" passHref>
       <Container ref={containerRef} containerWidth={containerWidth}>
         <Text>Contact me</Text>
         <Icon/>

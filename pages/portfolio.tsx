@@ -38,7 +38,7 @@ const Portfolio: NextPageWithLayout<portfolioProps> = ({ portfolioCasesData }) =
     <CtaSection 
       title="I’m available for work. Want to know more?"
       buttonText="Contact me"
-      href="mailto:business@laurensbooij.com"
+      href="mailto:mail.laurensbooij@gmail.com"
     />
   </>
 )
