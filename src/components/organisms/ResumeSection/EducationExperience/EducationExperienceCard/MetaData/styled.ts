@@ -34,7 +34,7 @@ export const Subtitle = styled(H4)`
   display: flex;
   align-items: center;
   justify-self: start;
-  margin: 0;
+  margin: 0 !important;
   color: ${themeStyles.colors.grey1};
 
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
