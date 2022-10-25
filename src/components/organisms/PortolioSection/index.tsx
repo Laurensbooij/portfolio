@@ -20,6 +20,8 @@ const PortfolioSection: FC<portfolioSectionProps> = ({ portfolioCasesData }) => 
 
   useEffect(() => {
     displayedCaseData ? window.document.body.classList.add('noscroll') : window.document.body.classList.remove('noscroll')
+
+    return () => window.document.body.classList.remove('noscroll')
   })
 
   const sortedPortfolioCasesData = portfolioCasesData.sort((a, b) => a.fields.order > b.fields.order ? 1 : -1)
