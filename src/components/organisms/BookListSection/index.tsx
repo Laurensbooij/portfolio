@@ -46,7 +46,7 @@ const BookListSection: FC<bookListSectionProps> = ({ bookListData }) => {
     setFilteredBookListData(sortedBookListData)
   }
 
-  const EmptySearchMessage = "It looks like I didn't read the book you're looking for yet. If you think I should you can submit it as a suggesiton down below!"
+  const EmptySearchMessage = "It looks like I didn't read the book you're looking for yet. If you have a good suggestion I'd love for you to get in touch with me about it!"
 
   return (
     <Container>
