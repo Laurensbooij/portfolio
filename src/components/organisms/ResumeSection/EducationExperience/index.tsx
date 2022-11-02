@@ -14,7 +14,7 @@ interface educationExperienceProps {
 
 const EducationExperience: FC<educationExperienceProps> = ({ data, inView }) => {
 
-  const sortedData = data.sort((a, b) => a.fields.order > b.fields.order ? -1 : 1)
+  const sortedData = data.sort((a, b) => a.fields.order > b.fields.order ? 1 : -1)
   
   const educationExperienceCards = sortedData.map((item: Entry<educationExperienceDataProps>) => (
     <EducationExperienceCard
