@@ -17,7 +17,7 @@ export const TitleContainer = styled.div`
 export const IconContainer = styled.div`
   height: 48px;
   width: 48px;
-  padding: 8px;
+  padding: 12px;
   border-radius: 8px;
   background: ${themeStyles.colors.primary};
 
