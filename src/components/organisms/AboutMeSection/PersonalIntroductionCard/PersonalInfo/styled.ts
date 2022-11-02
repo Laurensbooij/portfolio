@@ -90,7 +90,7 @@ export const InfoText = styled(BodyText)<infoTextProps>`
       bottom: 3px;
       width: calc(100% - 48px + 1px);
       height: 2px;
-      background: ${themeStyles.colors.gradient};
+      background: ${themeStyles.colors.primary};
       border-radius: 20px;
       transition: all 300ms ease;
     }
