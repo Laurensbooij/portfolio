@@ -53,7 +53,7 @@ const StandardLayout: FC<standardLayoutProps> = ({ children }) => {
     <>
       <Header 
         title="Laurens Booij"
-        subtitle="Passionate about product development / Aspiring Product Manager"
+        subtitle="Passionate about product development"
         forwardRef={headerRef}
       />
       <Container headerHeight={headerHeight} navigationHeight={navigationHeight}>
