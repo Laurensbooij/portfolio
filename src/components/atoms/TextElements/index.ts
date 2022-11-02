@@ -147,7 +147,7 @@ export const BodyText = styled.p`
     bottom: -2px;
     width: calc(100% - 2px);
     height: 2px;
-    background: ${themeStyles.colors.gradient};
+    background: ${themeStyles.colors.primary};
     border-radius: 20px;
     transition: all 300ms ease;
   }

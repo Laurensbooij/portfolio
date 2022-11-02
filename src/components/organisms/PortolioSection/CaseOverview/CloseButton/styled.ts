@@ -18,7 +18,7 @@ export const IconContainer = styled.div`
   border: 4px solid transparent;
   background: 
   linear-gradient(${themeStyles.colors.white}, ${themeStyles.colors.grey4}) padding-box,
-  ${themeStyles.colors.gradient} border-box;
+  ${themeStyles.colors.primary} border-box;
   background-size: 200% 200%;
   border-radius: 50%;
   cursor: pointer;

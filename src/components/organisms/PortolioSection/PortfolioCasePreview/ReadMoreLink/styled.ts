@@ -43,7 +43,7 @@ export const LinkBody = styled(BodyTextSmall)`
     bottom: 4px;
     width: calc(100% + 1px);
     height: 2px;
-    background: ${themeStyles.colors.gradient};
+    background: ${themeStyles.colors.primary};
     border-radius: 20px;
     transition: all 300ms ease;
   }
