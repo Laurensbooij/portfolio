@@ -31,6 +31,7 @@ export const Image = styled.img`
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 50%;
+  border: 6px solid ${themeStyles.colors.grey3};
 
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
     order: 2;
