@@ -4,7 +4,17 @@ import { bookListDataProps } from 'utilities/contentfulTypes/contentfulTypes'
 
 import { UnorderedList } from 'components/atoms/TextElements'
 
-import { StyledCardContainer, GridContainer, CoverImage, TitleContainer, Title, Authors, Summary, Divider, ExpandButton } from './styled'
+import { 
+  StyledCardContainer, 
+  GridContainer, 
+  CoverImage,
+  TitleContainer,
+  Title, 
+  Authors,
+  Summary,
+  Divider,
+  ExpandButton 
+} from './styled'
 
 interface bookListItemsProps {
   data: bookListDataProps
