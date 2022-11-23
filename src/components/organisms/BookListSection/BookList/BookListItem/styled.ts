@@ -1,3 +1,4 @@
+import { Container } from './../../../PageNotFoundSection/styled';
 import styled from 'styled-components'
 
 import themeStyles from 'utilities/themeStyles'
@@ -8,16 +9,16 @@ import { H5, BodyText, BodyTextSmall } from 'components/atoms/TextElements'
 import chevronIcon from 'media/icons/icon-chevron-grey2.png'
 
 interface styledCardContainerProps {
+  contentContainerHeight: number,
   expanded: boolean,
 }
 
 export const StyledCardContainer = styled(CardContainer)<styledCardContainerProps>`
   position: relative;
   overflow: hidden;
-  max-height: ${props => props.expanded ? `650px` : `214px`};
+  max-height: ${props => props.expanded ? `calc(${props.contentContainerHeight}px + 120px)` : `214px`};
   padding: 32px 24px;
   padding-bottom: ${props => props.expanded ? `94px` : `24px`};
-  
   transition: 600ms all ease;
 
   @media (min-width: ${themeStyles.breakpoints.tablet}) {
@@ -30,7 +31,13 @@ export const StyledCardContainer = styled(CardContainer)<styledCardContainerProp
   }
 `
 
-export const GridContainer = styled.div`
+export const ContentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+`
+
+export const MetaDataContainer = styled.div`
   display: grid;
   grid-template-areas:
     "image titlecontainer"
