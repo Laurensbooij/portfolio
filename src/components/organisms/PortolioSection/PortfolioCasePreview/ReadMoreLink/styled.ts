@@ -32,7 +32,7 @@ export const LinkBody = styled(BodyTextSmall)`
   position: relative;
   width: fit-content;
   align-self: flex-end;
-  height: 40px;
+  height: 2.5rem;
   margin: 0;
   cursor: pointer;
 
@@ -40,15 +40,15 @@ export const LinkBody = styled(BodyTextSmall)`
     content: "";
     position: absolute;
     right: -1px;
-    bottom: 4px;
+    bottom: 0.25rem;
     width: calc(100% + 1px);
     height: 2px;
     background: ${themeStyles.colors.primary};
-    border-radius: 20px;
+    border-radius: 1.25rem;
     transition: all 300ms ease;
   }
 
-  
+
   &:hover:before {
     animation: 600ms ease ${hoverAnimation};
   }
@@ -57,9 +57,9 @@ export const LinkBody = styled(BodyTextSmall)`
     content: "";
     display: inline-block;
     align-self: center;
-    height: 12px;
-    width: 12px;
-    margin-left: 4px;
+    height: 0.75rem;
+    width: 0.75rem;
+    margin-left: 0.25rem;
     background: url(${chevronIcon.src});
     background-repeat: no-repeat;
     background-size: cover;

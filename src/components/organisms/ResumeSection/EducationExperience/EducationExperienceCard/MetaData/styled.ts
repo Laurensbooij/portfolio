@@ -10,14 +10,14 @@ export const Container = styled.div`
   grid-template-areas:
     "title title"
     "subtitle daterange";
-  grid-gap: 12px;
+  grid-gap: 0.75rem;
 
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
     grid-template-columns: max-content auto auto;
     grid-template-areas:
       "title subtitle daterange";
     align-items: start;
-    grid-gap: 16px;
+    grid-gap: 1rem;
   }
 `
 
@@ -40,13 +40,13 @@ export const Subtitle = styled(H4)`
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 1rem;
     grid-area: subtitle;
-    
+
     &:before {
       content: "";
-      height: 32px;
-      width: 4px;
+      height: 2rem;
+      width: 0.25rem;
       border-radius: 50px;
       background: ${themeStyles.colors.grey3};
     }
@@ -56,7 +56,7 @@ export const Subtitle = styled(H4)`
 export const DateRange = styled(BodyText)`
   grid-area: daterange;
   justify-self: end;
-  font-weight: 500; 
+  font-weight: 500;
   margin: 0;
   color: ${themeStyles.colors.grey1};
 `

@@ -13,7 +13,7 @@ export const Container = styled.form`
 export const FormFieldsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1.25rem;
 `
 
 export const InputContainer = styled.div`
@@ -26,13 +26,13 @@ export const Input = styled.input`
   font-family: 'Montserrat', Roboto, Helvetica Neue, sans-serif;
   font-size: 0.875rem;
   color: ${themeStyles.colors.primaryText};
-  height: 40px;
+  height: 2.5rem;
   width: 100%;
-  margin: 8px 0 0;
-  padding: 0 16px;
+  margin: 0.5rem 0 0;
+  padding: 0 1rem;
   background: ${themeStyles.colors.grey4};
   border: 2px solid ${themeStyles.colors.grey3};
-  border-radius: 4px;
+  border-radius: 0.25rem;
 
   &::placeholder {
     color: ${themeStyles.colors.grey1};

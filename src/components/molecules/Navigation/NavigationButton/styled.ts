@@ -23,19 +23,19 @@ export const Container = styled.div<containerProps>`
   align-items: center;
   position: relative;
   overflow: hidden;
-  padding: 12px;
+  padding: 0.75rem;
   background: ${props => props.active ? themeStyles.colors.primary : themeStyles.colors.white};
   box-shadow: ${themeStyles.shadows.dropShadow};
-  border-radius: 8px;
+  border-radius: 0.5rem;
   cursor: pointer;
   transition: all 400ms ease, border 0ms ease;
 
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
     flex-direction: row;
     justify-content: space-between;
-    padding: 16px 24px 16px 44px;
-    border-radius: 0 8px 8px 0;
-    border: 4px solid ${props => props.active ? themeStyles.colors.primary : themeStyles.colors.white};
+    padding: 1rem 24px 1rem 2.75rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+    border: 0.25rem solid ${props => props.active ? themeStyles.colors.primary : themeStyles.colors.white};
 
     &:hover {
       border-color: ${themeStyles.colors.primary};
@@ -43,7 +43,7 @@ export const Container = styled.div<containerProps>`
   }
 
   @media (min-width: ${themeStyles.breakpoints.desktopXL}) {
-    border-radius: 8px;
+    border-radius: 0.5rem;
   }
 `
 
@@ -52,8 +52,8 @@ export const Icon = styled.div<iconProps>`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
   background-image: url(${props => props.iconUrl});
   background-repeat: no-repeat;
   background-size: cover;

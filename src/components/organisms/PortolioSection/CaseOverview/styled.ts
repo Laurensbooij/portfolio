@@ -41,8 +41,8 @@ export const ContentContainer = styled.section<contentContainerProps>`
     height: ${props => `calc(100vh - 120px)`};
     top: 60px;
     left: 60px;
-    border: solid 4px ${themeStyles.colors.grey3};
-    border-radius: 16px;
+    border: solid 0.25rem ${themeStyles.colors.grey3};
+    border-radius: 1rem;
   }
 
   @media (min-width: 1520px) {
@@ -52,9 +52,9 @@ export const ContentContainer = styled.section<contentContainerProps>`
 export const ScrollContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 2.5rem;
   width: 100%;
-  padding: 32px 24px 160px;
+  padding: 2rem 24px 160px;
 
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
     gap: 60px;
@@ -66,11 +66,11 @@ export const MetaDataContainer = styled.div`
 `
 
 export const Title = styled(H1)`
-  margin: 0 0 4px;
+  margin: 0 0 0.25rem;
 `
 
 export const Subtitle = styled(BodyTextSmall)`
-  margin: 0 0 20px;
+  margin: 0 0 1.25rem;
   color: ${themeStyles.colors.grey1};
 
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
@@ -82,5 +82,5 @@ export const Divider = styled.div`
   width: 100%;
   height: 3px;
   background: ${themeStyles.colors.grey3};
-  border-radius: 20px;
+  border-radius: 1.25rem;
 `

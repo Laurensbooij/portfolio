@@ -10,11 +10,11 @@ export const SubmitInput = styled.input`
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 160%;
-  height: 40px;
+  height: 2.5rem;
   width: 100%;
   padding: 0 1.25rem;
   border: none;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   color: ${themeStyles.colors.white};
   background: ${themeStyles.colors.primary};
   cursor: pointer;
@@ -22,6 +22,3 @@ export const SubmitInput = styled.input`
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
   }
 `
-
-
-

@@ -9,7 +9,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: -40px;
+  top: -2.5rem;
   height: 80px;
   width: 80px;
   background: ${themeStyles.colors.primary};

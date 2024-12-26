@@ -8,7 +8,7 @@ export const Container = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 1rem;
 
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
     gap: 24px;

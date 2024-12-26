@@ -15,12 +15,12 @@ export const Container = styled.div<containerProps>`
   height: 440px;
   background: ${themeStyles.colors.white};
   border: 2px solid ${themeStyles.colors.grey3};
-  border-radius: 12px;
+  border-radius: 0.75rem;
   box-sizing: border-box;
   overflow: hidden;
   cursor: pointer;
 
-  
+
   @media (min-width: ${themeStyles.breakpoints.tablet}) {
     grid-column: span ${props => props.fullWidth ? 4 : 2};
   }
@@ -76,13 +76,13 @@ export const Title = styled(H3)`
 `
 
 export const Subtitle  = styled(BodyTextSmall)`
-  margin: 0 0 16px;
+  margin: 0 0 1rem;
   color: ${themeStyles.colors.grey1};
 `
 
 export const CaseSummary = styled(BodyText)`
   display: none;
-  margin: 0 0 16px;
+  margin: 0 0 1rem;
 
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
     display: block;

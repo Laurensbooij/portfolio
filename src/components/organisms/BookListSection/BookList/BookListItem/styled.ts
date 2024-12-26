@@ -17,7 +17,7 @@ export const StyledCardContainer = styled(CardContainer)<styledCardContainerProp
   position: relative;
   overflow: hidden;
   max-height: ${props => props.expanded ? `calc(${props.contentContainerHeight}px + 120px)` : `214px`};
-  padding: 32px 24px;
+  padding: 2rem 24px;
   padding-bottom: ${props => props.expanded ? `94px` : `24px`};
   transition: 600ms all ease;
 
@@ -27,7 +27,7 @@ export const StyledCardContainer = styled(CardContainer)<styledCardContainerProp
   }
 
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
-    padding: 40px;
+    padding: 2.5rem;
   }
 `
 
@@ -44,7 +44,7 @@ export const MetaDataContainer = styled.div`
     "summary summary";
   grid-template-columns: 100px auto;
   grid-template-rows: 150px auto;
-  column-gap: 20px;
+  column-gap: 1.25rem;
   row-gap: 24px;
 
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
@@ -54,7 +54,7 @@ export const MetaDataContainer = styled.div`
     grid-template-columns: 120px auto;
     grid-template-rows: auto 1fr;
     column-gap: 24px;
-    row-gap: 12px;
+    row-gap: 0.75rem;
   }
 `
 
@@ -62,9 +62,9 @@ export const CoverImage = styled.img`
   grid-area: image;
   width: 100px;
   border: 2px solid ${themeStyles.colors.grey3};
-  border-radius: 8px;
+  border-radius: 0.5rem;
   box-shadow: ${themeStyles.shadows.dropShadow};
-  
+
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
     width: 120px;
   }
@@ -95,7 +95,7 @@ export const Divider = styled.div`
   width: 100%;
   height: 2px;
   background: ${themeStyles.colors.grey3};
-  border-radius: 20px;
+  border-radius: 1.25rem;
 `
 
 interface seeMoreButtonProps {
@@ -105,20 +105,20 @@ interface seeMoreButtonProps {
 export const ExpandButton = styled(BodyTextSmall)<seeMoreButtonProps>`
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
   position: absolute;
-  right: 20px;
-  bottom: 20px;
+  right: 1.25rem;
+  bottom: 1.25rem;
   margin: 0;
-  padding: 12px;
+  padding: 0.75rem;
   color: ${themeStyles.colors.grey1};
   cursor: pointer;
 
   &:after {
     content: "";
     display: inline-block;
-    height: 12px;
-    width: 12px;
+    height: 0.75rem;
+    width: 0.75rem;
     background: url(${chevronIcon.src});
     background-repeat: no-repeat;
     background-size: cover;

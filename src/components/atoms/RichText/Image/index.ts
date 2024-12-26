@@ -6,9 +6,9 @@ const Image = styled.img`
   display: block;
   height: 200px;
   width: 100%;
-  margin: 32px 0;
+  margin: 2rem 0;
   border: 2px solid ${themeStyles.colors.grey3};
-  border-radius: 12px;
+  border-radius: 0.75rem;
   object-fit: cover;
 
   @media (min-width: ${themeStyles.breakpoints.tablet}) {
@@ -17,7 +17,7 @@ const Image = styled.img`
 
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
     height: 340px;
-    margin: 40px 0;
+    margin: 2.5rem 0;
   }
 `
 

@@ -12,7 +12,6 @@ import githubIcon from "media/icons/icon-GitHub.png"
 const PersonalInfo = ({  }) => (
   <Container>
     <FlexContainer>
-      <InfoText iconUrl={ageIcon.src}>24 years old</InfoText>
       <InfoText iconUrl={countryIcon.src}>Amsterdam</InfoText>
     </FlexContainer>
     <FlexContainer>

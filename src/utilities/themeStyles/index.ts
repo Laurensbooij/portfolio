@@ -13,7 +13,7 @@ const themeStyles: DefaultTheme = {
     overlayBackground: 'rgba(0,0,0,0.1)',
   },
   shadows: {
-    dropShadow: '2px 2px 20px 0 rgba(61, 61, 61, 0.12)',
+    dropShadow: '2px 2px 1.25rem 0 rgba(61, 61, 61, 0.12)',
   },
   breakpoints: {
     tablet: '768px',

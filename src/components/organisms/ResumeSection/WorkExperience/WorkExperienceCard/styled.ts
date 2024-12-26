@@ -7,13 +7,13 @@ import CardContainer from 'components/atoms/CardContainer'
 import { H3, H4, BodyText } from 'components/atoms/TextElements'
 
 export const StyledCardContainer = styled(CardContainer)`
-  gap: 32px;
+  gap: 2rem;
 `
 
 export const MetadataContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1.25rem;
 
   @media (min-width:${themeStyles.breakpoints.desktop}) {
     flex-direction: row;
@@ -25,7 +25,7 @@ export const MetadataContainer = styled.div`
 export const FlexContainer = styled.div`
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 1.25rem;
 
   @media (min-width:${themeStyles.breakpoints.desktop}) {
     gap: 24px;
@@ -40,7 +40,7 @@ export const Logo = styled.div<logoProps>`
   height: 60px;
   width: 60px;
   border: 2px solid ${themeStyles.colors.grey4};
-  border-radius: 8px;
+  border-radius: 0.5rem;
   background: url(${props => props.src});
   background-repeat: no-repeat;
   background-size: cover;
@@ -74,8 +74,8 @@ export const Subtitle = styled(BodyText)`
 
     &:before {
       content: "";
-      height: 32px;
-      width: 4px;
+      height: 2rem;
+      width: 0.25rem;
       border-radius: 50px;
       background: ${themeStyles.colors.grey3};
     }
@@ -103,5 +103,5 @@ export const Daterange = styled(BodyText)`
 export const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 2rem;
 `

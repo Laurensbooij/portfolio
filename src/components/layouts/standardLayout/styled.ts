@@ -13,7 +13,7 @@ export const Container = styled.div<containerProps>`
   max-width: 1400px;
   height: 100%;
   margin: ${props => props.headerHeight}px 0 ${props => props.navigationHeight}px;
-  padding: 40px 12px 60px;
+  padding: 2.5rem 0.75rem 60px;
 
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
     width: auto;

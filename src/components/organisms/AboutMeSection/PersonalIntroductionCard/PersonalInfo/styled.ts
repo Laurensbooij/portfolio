@@ -10,13 +10,13 @@ export const Container = styled.div`
   align-items: flex-start;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 1.5rem;
 
   @media (min-width: ${themeStyles.breakpoints.tablet}) {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    gap: 32px 60px;
+    gap: 2rem 60px;
   }
 `
 
@@ -29,7 +29,7 @@ export const FlexContainer = styled.div`
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    gap: 32px 60px;
+    gap: 2rem 60px;
   }
 `
 
@@ -61,15 +61,15 @@ interface infoTextProps {
 export const InfoText = styled(BodyText)<infoTextProps>`
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 1rem;
   position: relative;
   width: fit-content;
   margin: 0 !important;
 
   &::before {
     content: "";
-    width: 32px;
-    height: 32px;
+    width: 2rem;
+    height: 2rem;
     background-image: url(${props => props.iconUrl});
     background-repeat: no-repeat;
     background-size: cover;
@@ -91,14 +91,12 @@ export const InfoText = styled(BodyText)<infoTextProps>`
       width: calc(100% - 48px + 1px);
       height: 2px;
       background: ${themeStyles.colors.primary};
-      border-radius: 20px;
+      border-radius: 1.25rem;
       transition: all 300ms ease;
     }
 
     &:hover:after {
       animation: 600ms ease ${hoverAnimation};
     }
-  `}  
+  `}
 `
-
-

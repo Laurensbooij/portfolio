@@ -9,7 +9,7 @@ import { BodyText } from 'components/atoms/TextElements'
 export const Container = styled.div`
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 1rem;
 `
 
 interface iconProps {
@@ -17,8 +17,8 @@ interface iconProps {
 }
 
 export const Icon = styled.div<iconProps>`
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
   background-color: ${themeStyles.colors.secondary};
   background-image: url(${props => props.iconUrl});
@@ -27,8 +27,8 @@ export const Icon = styled.div<iconProps>`
   background-position: center;
 
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
   }
 `
 

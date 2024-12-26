@@ -10,7 +10,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 40px;
+  height: 2.5rem;
 `
 
 export const ScrollButton = styled(BodyTextSmall)`
@@ -26,9 +26,9 @@ export const ScrollButton = styled(BodyTextSmall)`
     content: "";
     display: inline-block;
     align-self: center;
-    height: 12px;
-    width: 12px;
-    margin-left: 8px;
+    height: 0.75rem;
+    width: 0.75rem;
+    margin-left: 0.5rem;
     rotate: -90deg;
     background: url(${chevronIcon.src});
     background-repeat: no-repeat;

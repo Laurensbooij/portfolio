@@ -11,14 +11,14 @@ interface containerProps {
 export const Container = styled.div<containerProps>`
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1rem;
   position: relative;
   transform: ${props => props.indented ? `translateX(24px)` : `translateX(0)`};
   width: ${props => props.indented ? `calc(100% - 24px)` : `100%`};
-  padding: ${props => props.indented ? `8px 0` : `0`};
+  padding: ${props => props.indented ? `0.5rem 0` : `0`};
 
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
-    gap: 12px;
+    gap: 0.75rem;
   }
 
 
@@ -28,9 +28,9 @@ export const Container = styled.div<containerProps>`
     position: absolute;
     top: 0;
     left: -24px;
-    width: 4px;
+    width: 0.25rem;
     height: 100%;
-    border-radius: 20px;
+    border-radius: 1.25rem;
     background: ${themeStyles.colors.grey2};
   }
 `

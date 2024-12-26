@@ -15,10 +15,10 @@ export const Container = styled.div<containerProps>`
   align-items: center ;
   align-self: center;
   position: relative;
-  height: 40px;
+  height: 2.5rem;
   width: calc(100vw - 24px);
   max-width: 500px;
-  margin: 0 0 16px 0;
+  margin: 0 0 1rem 0;
   background: ${themeStyles.colors.white};
   border: 2px solid ${themeStyles.colors.grey3};
   border-radius: 50px;

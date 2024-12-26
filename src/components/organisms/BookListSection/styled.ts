@@ -10,7 +10,7 @@ export const Container = styled.section`
   flex-direction: column;
   align-items: center;
   gap: 60px;
-  padding: calc(44px + 16px) 0 0;
+  padding: calc(2.75rem + 1rem) 0 0;
 
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
     gap: 80px;
@@ -27,7 +27,7 @@ export const EmptySearchNotification = styled(H6)`
   text-align: center;
   width: 100%;
   max-width: 600px;
-  margin: 40px 0 0;
+  margin: 2.5rem 0 0;
   color: ${themeStyles.colors.primaryText};
 `
 
@@ -37,7 +37,7 @@ export const StyledSearchBox = styled(SearchBox)<styledSearchBoxProps>`
   top: ${props => props.offsetTop + 32}px;
   width: calc(100vw - 24px);
   box-shadow: ${themeStyles.shadows.dropShadow};
-    
+
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
     width: 100%;
   }

@@ -17,8 +17,8 @@ export const TitleContainer = styled.div`
 export const IconContainer = styled.div`
   height: 48px;
   width: 48px;
-  padding: 12px;
-  border-radius: 8px;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
   background: ${themeStyles.colors.primary};
 
   @media (min-width: ${themeStyles.breakpoints.desktop}) {

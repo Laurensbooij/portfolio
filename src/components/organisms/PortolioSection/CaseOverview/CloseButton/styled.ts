@@ -7,7 +7,7 @@ import crossIcon from "media/icons/icon-cross_gradient.png"
 export const IconContainer = styled.div`
   position: fixed;
   left: 50vw;
-  bottom: 32px;
+  bottom: 2rem;
   translate: -50%;
   display: flex;
   align-items: center;
@@ -15,8 +15,8 @@ export const IconContainer = styled.div`
   height: 48px;
   width: 48px;
   margin: 0 auto;
-  border: 4px solid transparent;
-  background: 
+  border: 0.25rem solid transparent;
+  background:
   linear-gradient(${themeStyles.colors.white}, ${themeStyles.colors.grey4}) padding-box,
   ${themeStyles.colors.primary} border-box;
   background-size: 200% 200%;
@@ -25,8 +25,8 @@ export const IconContainer = styled.div`
 
   &:before {
     content: "";
-    height: 20px;
-    width: 20px;
+    height: 1.25rem;
+    width: 1.25rem;
     background: url(${crossIcon.src});
     background-repeat: no-repeat;
     background-size: cover;

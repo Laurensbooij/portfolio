@@ -15,7 +15,7 @@ export const Container = styled.div<containerProps>`
   transition: 400ms all ease;
 
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
-    gap: 32px;
+    gap: 2rem;
     opacity: ${props => props.inView ? 1 : 0};
   }
 `

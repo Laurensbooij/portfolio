@@ -136,7 +136,7 @@ export const BodyText = styled.p`
     position: relative;
     width: fit-content;
     font-weight: 500;
-    padding: 0 4px 0;
+    padding: 0 0.25rem 0;
     cursor: pointer;
   }
 
@@ -148,14 +148,14 @@ export const BodyText = styled.p`
     width: calc(100% - 2px);
     height: 2px;
     background: ${themeStyles.colors.primary};
-    border-radius: 20px;
+    border-radius: 1.25rem;
     transition: all 300ms ease;
   }
 
   a:hover {
     color: ${themeStyles.colors.grey1};
   }
-  
+
   a:hover:before {
     animation: 600ms ease ${hoverAnimation};
   }
@@ -194,9 +194,9 @@ export const UnorderedList = styled.ul`
   font-family: 'Montserrat', Roboto, Helvetica Neue, sans-serif;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 0.75rem;
   margin: 1.25rem 0;
-  padding-left: 32px;
+  padding-left: 2rem;
   list-style: none;
 
   li {
@@ -216,12 +216,11 @@ export const UnorderedList = styled.ul`
     content: "";
     display: inline-block;
     position: absolute;
-    left: -20px;
+    left: -1.25rem;
     top: 0.5rem;
-    height: 8px;
-    width: 8px;
+    height: 0.5rem;
+    width: 0.5rem;
     border-radius: 50%;
     background-color: ${themeStyles.colors.secondary};
   }
 `
-

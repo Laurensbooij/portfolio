@@ -19,12 +19,12 @@ export const ScrollContainer = styled.div<scrollContainer>`
   justify-content: space-between;
   gap: 24px;
   width: calc(200% + 24px);
-  translate: ${props => props.toggled ? `calc(-50% - 12px) 0` : '0 0'};
+  translate: ${props => props.toggled ? `calc(-50% - 0.75rem) 0` : '0 0'};
   transition: all 0.6s ease;
 
   @media (min-width: ${themeStyles.breakpoints.desktop}) {
     gap: 80px;
     width: calc(200% + 80px);
-    translate: ${props => props.toggled ? `calc(-50% - 40px) 0` : '0 0'};
+    translate: ${props => props.toggled ? `calc(-50% - 2.5rem) 0` : '0 0'};
   }
 `

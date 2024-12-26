@@ -24,11 +24,11 @@ export const Label = styled(BodyText)`
 
 export const IndicatorContainer = styled.div`
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
 `
 
 export const Indicator = styled.div<indicatorProps>`
-  width: 32px;
+  width: 2rem;
   height: 6px;
   border-radius: 50px;
   background: ${props => props.active ? themeStyles.colors.secondary : themeStyles.colors.grey3};

@@ -11,9 +11,9 @@ export const HitboxContainer = styled.div`
   justify-content: center;
   position: absolute;
   top: 0;
-  right: 4px;
+  right: 0.25rem;
   height: 100%;
-  width: 40px;
+  width: 2.5rem;
   cursor: pointer;
 `
 

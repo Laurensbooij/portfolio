@@ -14,7 +14,7 @@ export const Container = styled.div<containerProps>`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 0.75rem;
   height: 48px;
   width: 48px;
   background: none;
@@ -24,7 +24,7 @@ export const Container = styled.div<containerProps>`
 
   @media (min-width: ${themeStyles.breakpoints.tablet}) {
     justify-content: space-between;
-    gap: 16px;
+    gap: 1rem;
     height: 52px;
     width: fit-content;
     padding: 0 10px 0 24px;
@@ -68,13 +68,13 @@ export const Icon = styled.div`
   }
 
   @media (min-width: ${themeStyles.breakpoints.tablet}) {
-    height: 32px;
-    width: 32px;
+    height: 2rem;
+    width: 2rem;
     border: none;
 
     &:before {
-      height: 20px;
-      width: 20px;
+      height: 1.25rem;
+      width: 1.25rem;
     }
   }
 `

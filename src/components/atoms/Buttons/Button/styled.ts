@@ -10,7 +10,7 @@ export const Anchor = styled.a`
   font-size: 0.875rem;
   line-height: 160%;
   padding: 0.75rem 1.25rem;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   color: ${themeStyles.colors.white};
   background: ${themeStyles.colors.primary};
   cursor: pointer;
@@ -20,4 +20,3 @@ export const Anchor = styled.a`
     padding: 1rem 1.5rem;
   }
 `
-
