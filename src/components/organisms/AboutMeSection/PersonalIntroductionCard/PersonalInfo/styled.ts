@@ -80,7 +80,7 @@ export const InfoText = styled(BodyText)<infoTextProps>`
     cursor: pointer;
 
     &:hover {
-      color: ${themeStyles.colors.grey1};
+      color: ${themeStyles.colors.primary};
     }
 
     &::after {

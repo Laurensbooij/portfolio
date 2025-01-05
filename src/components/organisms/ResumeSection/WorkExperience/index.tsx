@@ -14,11 +14,11 @@ interface workExperienceProps {
 
 const WorkExperience: FC<workExperienceProps> = ({ data, inView }) => {
 
-  const sortedData = data.sort((a, b) => a.fields.order > b.fields.order ? 1 : -1)
+  const sortedData = data.sort((a, b) => a.fields.order > b.fields.order ? -1 : 1)
 
   const workExperienceCards = sortedData.map((item: Entry<workExperienceDataProps>) => (
     <WorkExperienceCard
-      key={item.sys.id} 
+      key={item.sys.id}
       data={item.fields}
     />
   ))

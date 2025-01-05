@@ -6,7 +6,7 @@ import { educationExperienceDataProps } from 'utilities/contentfulTypes/contentf
 import EducationExperienceCard from './EducationExperienceCard'
 
 import { Container } from './styled'
- 
+
 interface educationExperienceProps {
   data: Entry<educationExperienceDataProps>[],
   inView: boolean,
@@ -14,11 +14,11 @@ interface educationExperienceProps {
 
 const EducationExperience: FC<educationExperienceProps> = ({ data, inView }) => {
 
-  const sortedData = data.sort((a, b) => a.fields.order > b.fields.order ? 1 : -1)
-  
+  const sortedData = data.sort((a, b) => a.fields.order > b.fields.order ? -1 : 1)
+
   const educationExperienceCards = sortedData.map((item: Entry<educationExperienceDataProps>) => (
     <EducationExperienceCard
-      key={item.sys.id} 
+      key={item.sys.id}
       data={item.fields}
     />
   ))

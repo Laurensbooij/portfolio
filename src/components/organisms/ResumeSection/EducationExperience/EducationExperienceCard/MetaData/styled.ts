@@ -16,7 +16,7 @@ export const Container = styled.div`
     grid-template-columns: max-content auto auto;
     grid-template-areas:
       "title subtitle daterange";
-    align-items: start;
+    align-items: center;
     grid-gap: 1rem;
   }
 `
@@ -45,8 +45,8 @@ export const Subtitle = styled(H4)`
 
     &:before {
       content: "";
-      height: 2rem;
-      width: 0.25rem;
+      height: 1.25rem;
+      width: 2px;
       border-radius: 50px;
       background: ${themeStyles.colors.grey3};
     }
