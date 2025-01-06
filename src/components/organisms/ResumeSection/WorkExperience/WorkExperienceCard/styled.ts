@@ -39,7 +39,7 @@ interface logoProps {
 export const Logo = styled.div<logoProps>`
   height: 60px;
   width: 60px;
-  border: 2px solid ${themeStyles.colors.grey4};
+  border: 2px solid ${themeStyles.colors.grey3};
   border-radius: 0.5rem;
   background: url(${props => props.src});
   background-repeat: no-repeat;

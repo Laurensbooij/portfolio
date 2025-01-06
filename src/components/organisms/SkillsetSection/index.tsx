@@ -5,7 +5,6 @@ import { skillsetLegendDataProps, skillsetDataProps } from 'utilities/contentful
 
 import SectionTitle from 'components/atoms/SectionTitle'
 import GridContainer from 'components/atoms/GridContainer'
-import SkillsetLegend from './SkillsetLegend'
 import SkillsetCard from './SkillsetCard'
 
 import { Container } from './styled'
@@ -20,7 +19,7 @@ const SkillsetSection: FC<skillsetSectionProps> = ({ legendData, skillsetData })
 
   const sortedSkillsetData = skillsetData.sort((a, b) => a.fields.order > b.fields.order ? 1 : -1)
   const skillsetCards = sortedSkillsetData.map((skillset) => (
-    <SkillsetCard 
+    <SkillsetCard
       key={skillset.sys.id}
       data={skillset.fields}
     />
@@ -30,7 +29,6 @@ const SkillsetSection: FC<skillsetSectionProps> = ({ legendData, skillsetData })
     <Container>
       <SectionTitle>My skillset</SectionTitle>
       <GridContainer>
-        <SkillsetLegend data={legendData} />
         {skillsetCards}
       </GridContainer>
     </Container>

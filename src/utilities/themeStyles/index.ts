@@ -2,8 +2,8 @@ import { DefaultTheme } from 'styled-components'
 
 const themeStyles: DefaultTheme = {
   colors: {
-    primary: 'rgba(103,110,238,1)',
-    secondary: 'rgba(246,166,0,1)',
+    primary: 'rgba(146,174,160,1)',
+    secondary: 'rgba(169,188,178,1)',
     primaryText: 'rgba(55,50,67,1)',
     grey1: 'rgba(179,179,179,1)',
     grey2: 'rgba(214,214,214,1)',
